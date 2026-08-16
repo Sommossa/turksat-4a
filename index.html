@@ -22,7 +22,8 @@
 
   <!-- Header -->
   <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur-md sticky top-0 z-30">
-    <div class="max-w-6xl mx-auto px-4 py-3 sm:py-4 flex flex-wrap items-center justify-between gap-3">
+    <div class="max-w-6xl mx-auto px-4 py-3 sm:py-4 flex flex-wrap items-center justify-between gap-4">
+      <!-- Logo ve Başlık -->
       <div class="flex items-center space-x-3">
         <div class="w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-2xl shadow-inner">
           📡
@@ -32,8 +33,20 @@
           <p class="text-xs sm:text-sm text-slate-400">Güncel kanal listesi</p>
         </div>
       </div>
-      <div id="stats" class="text-sm font-semibold bg-slate-800/80 px-4 py-2 rounded-lg border border-slate-700 text-slate-300">
-        Yükleniyor...
+      
+      <!-- Yapay Zeka Rehberi ve İstatistik Butonları -->
+      <div class="flex items-center gap-2 sm:gap-3 w-full md:w-auto">
+        <button onclick="openGuideModal()" class="flex-1 md:flex-none flex items-center justify-center gap-1.5 text-sm sm:text-base font-bold bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white px-4 py-2.5 rounded-xl shadow-lg transition transform active:scale-95 border border-purple-500/30">
+          <svg class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2L13.4 8.6L20 10L13.4 11.4L12 18L10.6 11.4L4 10L10.6 8.6L12 2Z" />
+            <path d="M5 14L5.7 17.3L9 18L5.7 18.7L5 22L4.3 18.7L1 18L4.3 17.3L5 14Z" />
+            <path d="M19 14L19.7 17.3L23 18L19.7 18.7L19 22L18.3 18.7L15 18L18.3 17.3L19 14Z" />
+          </svg>
+          Nasıl Yüklenir?
+        </button>
+        <div id="stats" class="flex-none text-sm sm:text-base font-bold bg-slate-800/80 px-4 py-2.5 rounded-xl border border-slate-700 text-slate-200 shadow-inner whitespace-nowrap">
+          Yükleniyor...
+        </div>
       </div>
     </div>
   </header>
@@ -134,10 +147,87 @@
 
   </main>
 
-  <!-- Kopyalama Toast -->
-  <div id="toast" class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 transform translate-y-32 opacity-0 transition-all duration-300 bg-teal-500 text-slate-950 text-base font-extrabold px-6 py-4 rounded-full shadow-[0_0_30px_rgba(20,184,166,0.5)] flex items-center space-x-3 pointer-events-none">
+  <!-- AI Kurulum Asistanı Modal -->
+  <div id="guideModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-slate-950/80 backdrop-blur-sm p-4 opacity-0 transition-opacity duration-300">
+    <div class="bg-slate-900 border border-slate-700 rounded-3xl w-full max-w-2xl max-h-[85vh] overflow-hidden flex flex-col shadow-2xl transform scale-95 transition-transform duration-300">
+      
+      <!-- Modal Header -->
+      <div class="bg-slate-900/95 backdrop-blur border-b border-slate-800 p-5 sm:p-6 flex justify-between items-center z-10 shrink-0">
+        <div class="flex items-center gap-3 sm:gap-4">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-2xl shadow-inner shadow-purple-400/50">
+            🪄
+          </div>
+          <div>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">AI Kurulum Asistanı</h2>
+            <p class="text-xs sm:text-sm text-slate-400">TV markanıza göre frekans ekleme adımları</p>
+          </div>
+        </div>
+        <button onclick="closeGuideModal()" class="text-slate-400 hover:text-white bg-slate-800 hover:bg-slate-700 p-2 sm:p-3 rounded-full transition border border-slate-700">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      
+      <!-- Modal Content -->
+      <div class="p-5 sm:p-6 space-y-5 overflow-y-auto text-slate-300 text-sm sm:text-base">
+         <div class="p-4 bg-teal-500/10 border border-teal-500/30 rounded-2xl text-teal-300 font-medium flex items-start gap-3">
+            <span class="text-2xl">💡</span>
+            <p>Aşağıdan televizyonunuzun markasını bularak kopyaladığınız frekans bilgilerini adım adım nasıl ekleyeceğinizi öğrenebilirsiniz.</p>
+         </div>
+
+         <!-- Samsung TV -->
+         <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800">
+            <h3 class="font-bold text-lg text-white mb-3 flex items-center gap-2">📺 Samsung TV'ler İçin</h3>
+            <ol class="list-decimal list-inside space-y-2 text-slate-400">
+               <li>Kumandanızdan <strong class="text-slate-200">Menü (Ayarlar)</strong> tuşuna basın.</li>
+               <li><strong class="text-slate-200">Yayın</strong> kategorisine, ardından <strong class="text-slate-200">Uzman Ayarları</strong>'na girin.</li>
+               <li><strong class="text-slate-200">Manuel Ayarlama</strong> seçeneğini açın.</li>
+               <li>Uydu olarak <strong class="text-slate-200">Türksat 42.0E</strong> seçin ve <strong class="text-slate-200">Yeni</strong> butonuna tıklayın.</li>
+               <li>Kopyaladığınız Frekans, Sembol ve Polarizasyon değerlerini girip <strong class="text-slate-200">Kaydet</strong> ve <strong class="text-slate-200">Ara</strong> tuşuna basın.</li>
+            </ol>
+         </div>
+
+         <!-- LG TV -->
+         <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800">
+            <h3 class="font-bold text-lg text-white mb-3 flex items-center gap-2">📺 LG TV'ler İçin</h3>
+            <ol class="list-decimal list-inside space-y-2 text-slate-400">
+               <li>Kumandadan <strong class="text-slate-200">Ayarlar (Çark İşareti)</strong> tuşuna basın.</li>
+               <li><strong class="text-slate-200">Tüm Ayarlar</strong> > <strong class="text-slate-200">Kanallar</strong> menüsüne girin.</li>
+               <li><strong class="text-slate-200">Kanal Ayarlama ve Ayarları</strong> bölümüne tıklayın.</li>
+               <li><strong class="text-slate-200">Manuel Ayarlama</strong>'yı seçip <strong class="text-slate-200">Uydu DTV</strong> kısmına girin.</li>
+               <li>Ekrana ilgili frekans değerlerini girerek <strong class="text-slate-200">Ekle / Güncelle</strong> butonuna basın.</li>
+            </ol>
+         </div>
+
+         <!-- Vestel / Beko / Arçelik -->
+         <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800">
+            <h3 class="font-bold text-lg text-white mb-3 flex items-center gap-2">📺 Vestel / Beko / Arçelik</h3>
+            <ol class="list-decimal list-inside space-y-2 text-slate-400">
+               <li>Kumandadan <strong class="text-slate-200">Menü</strong> tuşuna basın.</li>
+               <li><strong class="text-slate-200">Kurulum</strong> veya <strong class="text-slate-200">Kanal Ayarları</strong> menüsünü açın.</li>
+               <li><strong class="text-slate-200">Manuel Kanal Arama</strong> seçeneğine tıklayın.</li>
+               <li>Arama Tipi'ni <strong class="text-slate-200">Uydu</strong> yaparak Frekans, Polarizasyon ve Sembol değerlerini girin.</li>
+               <li>Kumandadan <strong class="text-slate-200">OK</strong> tuşuna basarak aramayı başlatın.</li>
+            </ol>
+         </div>
+
+         <!-- Harici Uydu Alıcıları -->
+         <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800">
+            <h3 class="font-bold text-lg text-white mb-3 flex items-center gap-2">📟 Harici Uydu Alıcıları (Next, Hiremco vb.)</h3>
+            <ol class="list-decimal list-inside space-y-2 text-slate-400">
+               <li>Kumandadan <strong class="text-slate-200">Menü</strong> tuşuna basın ve <strong class="text-slate-200">Kurulum</strong> menüsüne girin.</li>
+               <li><strong class="text-slate-200">TP Ekle (Transponder Ekle)</strong> veya <strong class="text-slate-200">Manuel Arama</strong> bölümüne girin.</li>
+               <li>Kumandanızın renkli tuşlarını (genelde <span class="text-green-400 font-bold">Yeşil</span> veya <span class="text-red-400 font-bold">Kırmızı</span>) kullanarak <strong>Yeni TP</strong> ekleyin.</li>
+               <li>Kopyaladığınız Frekans değerlerini girip kanalı aratın.</li>
+            </ol>
+         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Kopyalama Toast Bildirimi -->
+  <div id="toast" class="fixed bottom-8 left-1/2 -translate-x-1/2 z-[200] transform translate-y-32 opacity-0 transition-all duration-300 bg-teal-500 text-slate-950 text-base font-extrabold px-6 py-4 rounded-full shadow-[0_0_30px_rgba(20,184,166,0.5)] flex items-center space-x-3 pointer-events-none">
     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-    <span id="toastMsg">Frekans kopyalandı!</span>
+    <span id="toastMsg">Kopyalandı!</span>
   </div>
 
   <script>
@@ -167,6 +257,30 @@
       loadMoreBtn: document.getElementById('loadMoreBtn'),
       toast: document.getElementById('toast')
     };
+
+    // Modal Aç / Kapat
+    function openGuideModal() {
+      const modal = document.getElementById('guideModal');
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        modal.firstElementChild.classList.remove('scale-95');
+      }, 10);
+    }
+
+    function closeGuideModal() {
+      const modal = document.getElementById('guideModal');
+      modal.classList.add('opacity-0');
+      modal.firstElementChild.classList.add('scale-95');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 300);
+    }
+
+    // Modal'ın dışına tıklanınca kapatma
+    document.getElementById('guideModal').addEventListener('click', function(e) {
+      if(e.target === this) closeGuideModal();
+    });
 
     // Mobil Filtre Aç/Kapat Mantığı
     let filtersOpen = false;
@@ -280,6 +394,7 @@
         const turIcon = item.tur === 'RADYO' ? '📻' : '📺';
         const turColor = item.tur === 'RADYO' ? 'text-purple-400 bg-purple-500/10' : 'text-indigo-400 bg-indigo-500/10';
 
+        // Tırnak işaretli kanal isimlerinin JS hatası vermemesi için data niteliklerini kullanıyoruz.
         card.innerHTML = `
           <div>
             <div class="flex items-start justify-between gap-3 mb-5">
@@ -314,10 +429,15 @@
               ${turIcon} ${item.tur || 'TV'}
             </span>
             <button 
-              onclick="copyParams('${item.frekans}', '${item.polarizasyon}', '${item.sembol}', '${item.fec}')" 
+              data-kanal="${item.kanal}"
+              data-frekans="${item.frekans}"
+              data-pol="${polDisplay}"
+              data-sembol="${item.sembol}"
+              data-fec="${item.fec}"
+              onclick="copyParams(this)" 
               class="inline-flex items-center gap-2 text-sm sm:text-base font-bold text-teal-400 hover:text-teal-300 bg-teal-500/10 hover:bg-teal-500/20 px-5 py-3 rounded-xl transition-colors border border-teal-500/20"
             >
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
               <span>Kopyala</span>
             </button>
           </div>
@@ -331,10 +451,18 @@
       elements.pagination.classList.toggle('hidden', displayedCount >= filteredChannels.length);
     }
 
-    window.copyParams = function(frekans, pol, sembol, fec) {
-      const text = `${frekans} ${pol} ${sembol} FEC: ${fec}`;
+    // Yeni ve Gelişmiş Kopyalama Formatı
+    window.copyParams = function(btn) {
+      const kanal = btn.getAttribute('data-kanal');
+      const frekans = btn.getAttribute('data-frekans');
+      const pol = btn.getAttribute('data-pol');
+      const sembol = btn.getAttribute('data-sembol');
+      const fec = btn.getAttribute('data-fec');
+      
+      const text = `${kanal} - ${frekans} ${pol} ${sembol} FEC: ${fec}`;
+      
       navigator.clipboard.writeText(text).then(() => {
-        showToast(`Kopyalandı: ${text}`);
+        showToast(`Kopyalandı: ${kanal}`);
       });
     };
 
