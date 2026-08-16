@@ -24,109 +24,119 @@
   <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur-md sticky top-0 z-30">
     <div class="max-w-6xl mx-auto px-4 py-3 sm:py-4 flex flex-wrap items-center justify-between gap-3">
       <div class="flex items-center space-x-3">
-        <div class="w-10 h-10 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-xl shadow-inner">
+        <div class="w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-2xl shadow-inner">
           📡
         </div>
         <div>
-          <h1 class="text-base sm:text-lg font-bold tracking-tight text-white">Türksat Frekans</h1>
-          <p class="text-[11px] sm:text-xs text-slate-400">Güncel uydu parametreleri</p>
+          <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-white">Türksat Frekans</h1>
+          <p class="text-xs sm:text-sm text-slate-400">Güncel kanal listesi</p>
         </div>
       </div>
-      <div id="stats" class="text-[11px] sm:text-xs font-medium bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700 text-slate-300">
+      <div id="stats" class="text-sm font-semibold bg-slate-800/80 px-4 py-2 rounded-lg border border-slate-700 text-slate-300">
         Yükleniyor...
       </div>
     </div>
   </header>
 
   <!-- Main -->
-  <main class="flex-1 max-w-6xl w-full mx-auto px-4 py-6">
+  <main class="flex-1 max-w-6xl w-full mx-auto px-4 py-6 sm:py-8">
     
     <!-- Filtre Paneli -->
-    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 sm:p-5 shadow-lg mb-6 sm:mb-8 space-y-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-5 sm:p-6 shadow-xl mb-6 sm:mb-8">
       
-      <!-- Arama Çubuğu -->
+      <!-- Belirginleştirilmiş Arama Çubuğu -->
       <div class="relative">
-        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none text-teal-400">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
         </div>
         <input 
           type="text" 
           id="searchInput"
-          placeholder="Kanal, paket veya frekans ara (Örn: STAR, 12053)..."
-          class="w-full pl-11 pr-10 py-3.5 rounded-xl bg-slate-950 border border-slate-700 text-white placeholder-slate-500 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-teal-500 transition shadow-inner"
+          placeholder="Kanal adını buraya yazın..."
+          class="w-full pl-16 pr-14 py-4 sm:py-5 rounded-2xl bg-slate-950 border-2 border-teal-500 text-white placeholder-slate-400 text-lg sm:text-xl font-bold focus:outline-none focus:ring-4 focus:ring-teal-500/40 transition shadow-inner"
           autocomplete="off"
         >
         <button id="clearSearch" class="hidden absolute inset-y-0 right-0 pr-4 flex items-center text-slate-400 hover:text-white">
-          ✕
+          <div class="bg-slate-800 rounded-full p-2 border border-slate-700 shadow">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </div>
         </button>
       </div>
 
-      <!-- Select Filtreleri -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
-        <div class="flex flex-col">
-          <label class="text-[11px] font-semibold text-slate-400 mb-1.5 uppercase tracking-wider">Kapsama</label>
-          <select id="filterKapsama" class="bg-slate-950 border border-slate-700 rounded-lg px-3 py-2.5 text-sm text-slate-200 focus:ring-2 focus:ring-teal-500 focus:outline-none">
-            <option value="">Tümü</option>
-            <option value="Batı">Batı</option>
-            <option value="Doğu">Doğu</option>
-            <option value="Türkiye">Türkiye</option>
-            <option value="Afrika">Afrika</option>
-            <option value="Ka-West">Ka-West</option>
-          </select>
-        </div>
+      <!-- Mobil İçin Filtreleri Göster / Gizle Butonu -->
+      <button id="toggleFiltersBtn" class="w-full md:hidden flex items-center justify-center gap-2 mt-5 py-3.5 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 rounded-xl text-base font-bold transition shadow">
+        <svg id="filterIcon" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        <span id="filterBtnText">Detaylı Filtreleri Göster</span>
+      </button>
 
-        <div class="flex flex-col">
-          <label class="text-[11px] font-semibold text-slate-400 mb-1.5 uppercase tracking-wider">Polarizasyon</label>
-          <select id="filterPol" class="bg-slate-950 border border-slate-700 rounded-lg px-3 py-2.5 text-sm text-slate-200 focus:ring-2 focus:ring-teal-500 focus:outline-none">
-            <option value="">Tümü</option>
-            <option value="V">V (Dikey)</option>
-            <option value="H">H (Yatay)</option>
-          </select>
-        </div>
+      <!-- Select Filtreleri (Mobilde Gizli) -->
+      <div id="filterSectionWrapper" class="hidden md:block mt-5 pt-5 border-t border-slate-800 md:mt-6 md:pt-0 md:border-0">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <div class="flex flex-col">
+            <label class="text-sm font-semibold text-slate-400 mb-2">Kapsama</label>
+            <select id="filterKapsama" class="bg-slate-950 border-2 border-slate-800 rounded-xl px-4 py-3.5 text-base text-slate-200 font-medium focus:ring-2 focus:ring-teal-500 focus:outline-none">
+              <option value="">Tümü</option>
+              <option value="Batı">Batı</option>
+              <option value="Doğu">Doğu</option>
+              <option value="Türkiye">Türkiye</option>
+              <option value="Afrika">Afrika</option>
+              <option value="Ka-West">Ka-West</option>
+            </select>
+          </div>
 
-        <div class="flex flex-col">
-          <label class="text-[11px] font-semibold text-slate-400 mb-1.5 uppercase tracking-wider">Tür</label>
-          <select id="filterTur" class="bg-slate-950 border border-slate-700 rounded-lg px-3 py-2.5 text-sm text-slate-200 focus:ring-2 focus:ring-teal-500 focus:outline-none">
-            <option value="">Tümü</option>
-            <option value="TV">📺 TV</option>
-            <option value="RADYO">📻 Radyo</option>
-          </select>
-        </div>
+          <div class="flex flex-col">
+            <label class="text-sm font-semibold text-slate-400 mb-2">Polarizasyon</label>
+            <select id="filterPol" class="bg-slate-950 border-2 border-slate-800 rounded-xl px-4 py-3.5 text-base text-slate-200 font-medium focus:ring-2 focus:ring-teal-500 focus:outline-none">
+              <option value="">Tümü</option>
+              <option value="V">V (Dikey)</option>
+              <option value="H">H (Yatay)</option>
+            </select>
+          </div>
 
-        <div class="flex items-end">
-          <button id="resetFilters" class="w-full py-2.5 px-3 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white rounded-lg text-sm font-medium transition border border-slate-700">
-            Sıfırla
-          </button>
+          <div class="flex flex-col">
+            <label class="text-sm font-semibold text-slate-400 mb-2">Tür</label>
+            <select id="filterTur" class="bg-slate-950 border-2 border-slate-800 rounded-xl px-4 py-3.5 text-base text-slate-200 font-medium focus:ring-2 focus:ring-teal-500 focus:outline-none">
+              <option value="">Tümü</option>
+              <option value="TV">📺 TV</option>
+              <option value="RADYO">📻 Radyo</option>
+            </select>
+          </div>
+
+          <div class="flex items-end">
+            <button id="resetFilters" class="w-full py-3.5 px-4 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-xl text-base font-bold transition border border-slate-700 shadow">
+              Seçimleri Sıfırla
+            </button>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Sonuçlar Listesi (Grid) -->
-    <div id="resultsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+    <div id="resultsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
       <!-- Kartlar buraya gelecek -->
     </div>
 
     <!-- Durum Mesajları -->
-    <div id="statusMessage" class="hidden text-center py-16">
-      <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-slate-900 border border-slate-800 text-3xl mb-4">
+    <div id="statusMessage" class="hidden text-center py-20">
+      <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-slate-900 border-2 border-slate-800 text-4xl mb-5 shadow-inner">
         🔍
       </div>
-      <h3 class="text-lg font-semibold text-white" id="statusTitle">Sonuç bulunamadı</h3>
-      <p class="text-sm text-slate-400 mt-2" id="statusDesc">Arama kriterlerinizi değiştirip tekrar deneyin.</p>
+      <h3 class="text-2xl font-bold text-white" id="statusTitle">Sonuç bulunamadı</h3>
+      <p class="text-base text-slate-400 mt-3" id="statusDesc">Aradığınız isimde bir kanal bulamadık.</p>
     </div>
 
     <!-- Sayfalama -->
     <div id="pagination" class="hidden text-center py-10">
-      <button id="loadMoreBtn" class="px-8 py-3 bg-slate-900 hover:bg-slate-800 border border-slate-700 text-teal-400 hover:text-teal-300 font-semibold rounded-xl text-sm transition shadow-lg">
-        Daha Fazla Kanal Göster
+      <button id="loadMoreBtn" class="px-10 py-4 bg-slate-900 hover:bg-slate-800 border-2 border-slate-700 text-teal-400 font-bold text-lg rounded-2xl transition shadow-xl">
+        Daha Fazla Kanal Yükle
       </button>
     </div>
 
   </main>
 
   <!-- Kopyalama Toast -->
-  <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 transform translate-y-24 opacity-0 transition-all duration-300 bg-teal-500 text-slate-950 text-sm font-bold px-5 py-3 rounded-full shadow-2xl flex items-center space-x-2 pointer-events-none">
-    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+  <div id="toast" class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 transform translate-y-32 opacity-0 transition-all duration-300 bg-teal-500 text-slate-950 text-base font-extrabold px-6 py-4 rounded-full shadow-[0_0_30px_rgba(20,184,166,0.5)] flex items-center space-x-3 pointer-events-none">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
     <span id="toastMsg">Frekans kopyalandı!</span>
   </div>
 
@@ -140,6 +150,10 @@
     const elements = {
       searchInput: document.getElementById('searchInput'),
       clearSearch: document.getElementById('clearSearch'),
+      toggleFiltersBtn: document.getElementById('toggleFiltersBtn'),
+      filterSectionWrapper: document.getElementById('filterSectionWrapper'),
+      filterBtnText: document.getElementById('filterBtnText'),
+      filterIcon: document.getElementById('filterIcon'),
       filterKapsama: document.getElementById('filterKapsama'),
       filterPol: document.getElementById('filterPol'),
       filterTur: document.getElementById('filterTur'),
@@ -154,13 +168,27 @@
       toast: document.getElementById('toast')
     };
 
+    // Mobil Filtre Aç/Kapat Mantığı
+    let filtersOpen = false;
+    elements.toggleFiltersBtn.addEventListener('click', () => {
+      filtersOpen = !filtersOpen;
+      if (filtersOpen) {
+        elements.filterSectionWrapper.classList.remove('hidden');
+        elements.filterBtnText.textContent = "Filtreleri Gizle";
+        elements.filterIcon.classList.add('rotate-180');
+      } else {
+        elements.filterSectionWrapper.classList.add('hidden');
+        elements.filterBtnText.textContent = "Detaylı Filtreleri Göster";
+        elements.filterIcon.classList.remove('rotate-180');
+      }
+    });
+
     async function loadChannels() {
       try {
         const res = await fetch('kanallar.json');
         if (!res.ok) throw new Error('Yüklenemedi');
         allChannels = await res.json();
         
-        // Yeni Ağırlıklandırılmış Fuse.js Ayarları
         fuse = new Fuse(allChannels, {
           keys: [
             { name: 'kanal', weight: 2.0 },
@@ -175,7 +203,7 @@
 
         applyFilters();
       } catch (err) {
-        showStatus('Veri Yüklenemedi', 'kanallar.json dosyası bulunamadı. Lütfen dizini kontrol edin.');
+        showStatus('Kanal Listesi Yüklenemedi', 'İnternet bağlantınızı kontrol edin.');
         elements.stats.textContent = 'Hata';
       }
     }
@@ -190,7 +218,6 @@
 
       let results = allChannels;
 
-      // Yeni Arama Mantığı (Tam eşleşme önceliği)
       if (query.length > 0 && fuse) {
         let searchResults = fuse.search(query).map(item => item.item);
         const queryLower = query.toLowerCase();
@@ -199,11 +226,9 @@
           const aKanal = a.kanal.toLowerCase();
           const bKanal = b.kanal.toLowerCase();
           
-          // 1. Kural: Birebir eşitse en üste çıkar
           if (aKanal === queryLower) return -1;
           if (bKanal === queryLower) return 1;
           
-          // 2. Kural: Aranan kelimeyle tam olarak başlıyorsa üste çıkar
           const startsWithA = aKanal.startsWith(queryLower + ' ');
           const startsWithB = bKanal.startsWith(queryLower + ' ');
           
@@ -225,10 +250,10 @@
       displayedCount = 0;
       elements.resultsContainer.innerHTML = '';
       
-      elements.stats.textContent = `${filteredChannels.length} Kayıt Bulundu`;
+      elements.stats.textContent = `${filteredChannels.length} Kanal`;
 
       if (filteredChannels.length === 0) {
-        showStatus('Kanal Bulunamadı', 'Farklı bir arama terimi veya filtre seçin.');
+        showStatus('Kanal Bulunamadı', 'Farklı bir arama yapın.');
         elements.pagination.classList.add('hidden');
       } else {
         hideStatus();
@@ -242,9 +267,8 @@
 
       nextBatch.forEach(item => {
         const card = document.createElement('div');
-        card.className = "bg-slate-900 border border-slate-800 hover:border-slate-600 rounded-2xl p-5 flex flex-col justify-between transition-all shadow-md group";
+        card.className = "bg-slate-900 border border-slate-800 hover:border-slate-600 rounded-3xl p-5 flex flex-col justify-between transition-all shadow-lg group";
 
-        // Polarizasyon Metin Dönüşümü
         let polDisplay = item.polarizasyon;
         if(polDisplay === 'V') polDisplay = 'V (Dikey)';
         if(polDisplay === 'H') polDisplay = 'H (Yatay)';
@@ -258,45 +282,42 @@
 
         card.innerHTML = `
           <div>
-            <!-- Başlık Alanı -->
-            <div class="flex items-start justify-between gap-3 mb-4">
-              <h2 class="font-bold text-white text-lg leading-tight group-hover:text-teal-400 transition-colors line-clamp-2">
+            <div class="flex items-start justify-between gap-3 mb-5">
+              <h2 class="font-extrabold text-white text-xl sm:text-2xl leading-tight group-hover:text-teal-400 transition-colors line-clamp-2">
                 ${item.kanal}
               </h2>
-              <span class="text-[11px] font-bold px-2.5 py-1 rounded-md border whitespace-nowrap ${polColor}">
+              <span class="text-xs sm:text-sm font-bold px-3 py-1.5 rounded-lg border whitespace-nowrap ${polColor}">
                 ${polDisplay}
               </span>
             </div>
 
-            <!-- Detay Listesi -->
-            <div class="space-y-3 bg-slate-950/50 p-4 rounded-xl border border-slate-800/80">
-              <div class="flex justify-between items-center text-sm border-b border-slate-800/60 pb-2.5">
-                <span class="text-slate-400 font-medium">Frekans</span>
-                <span class="font-mono font-bold text-slate-100 text-base tracking-wide">${item.frekans} <span class="text-[10px] text-slate-500 font-sans">MHz</span></span>
+            <div class="space-y-4 bg-slate-950/70 p-5 rounded-2xl border border-slate-800">
+              <div class="flex justify-between items-center border-b border-slate-800/80 pb-3">
+                <span class="text-slate-400 font-semibold text-sm sm:text-base">Frekans</span>
+                <span class="font-mono font-black text-slate-100 text-lg sm:text-xl tracking-wide">${item.frekans} <span class="text-xs text-slate-500 font-sans">MHz</span></span>
               </div>
               
-              <div class="flex justify-between items-center text-sm border-b border-slate-800/60 pb-2.5">
-                <span class="text-slate-400 font-medium">Sembol / FEC</span>
-                <span class="font-mono font-medium text-slate-200">${item.sembol} <span class="text-slate-600 mx-1">|</span> ${item.fec}</span>
+              <div class="flex justify-between items-center border-b border-slate-800/80 pb-3">
+                <span class="text-slate-400 font-semibold text-sm sm:text-base">Sembol</span>
+                <span class="font-mono font-bold text-slate-200 text-base sm:text-lg">${item.sembol} <span class="text-slate-600 mx-1">/</span> ${item.fec}</span>
               </div>
               
-              <div class="flex justify-between items-center text-sm">
-                <span class="text-slate-400 font-medium">Kapsama</span>
-                <span class="font-medium text-slate-200">${item.kapsama || '-'}</span>
+              <div class="flex justify-between items-center text-sm sm:text-base">
+                <span class="text-slate-400 font-semibold">Kapsama</span>
+                <span class="font-bold text-slate-200">${item.kapsama || '-'}</span>
               </div>
             </div>
           </div>
 
-          <!-- Alt Kısım -->
-          <div class="flex items-center justify-between mt-4 pt-3 border-t border-slate-800/60">
-            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded text-xs font-semibold ${turColor}">
+          <div class="flex items-center justify-between mt-5 pt-4 border-t border-slate-800">
+            <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-sm font-bold ${turColor}">
               ${turIcon} ${item.tur || 'TV'}
             </span>
             <button 
               onclick="copyParams('${item.frekans}', '${item.polarizasyon}', '${item.sembol}', '${item.fec}')" 
-              class="inline-flex items-center gap-1.5 text-xs font-bold text-teal-400 hover:text-teal-300 bg-teal-500/10 hover:bg-teal-500/20 px-3.5 py-2 rounded-lg transition-colors"
+              class="inline-flex items-center gap-2 text-sm sm:text-base font-bold text-teal-400 hover:text-teal-300 bg-teal-500/10 hover:bg-teal-500/20 px-5 py-3 rounded-xl transition-colors border border-teal-500/20"
             >
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
               <span>Kopyala</span>
             </button>
           </div>
@@ -321,10 +342,10 @@
     function showToast(msg) {
       clearTimeout(toastTimer);
       document.getElementById('toastMsg').textContent = msg;
-      elements.toast.classList.remove('translate-y-24', 'opacity-0');
+      elements.toast.classList.remove('translate-y-32', 'opacity-0');
       
       toastTimer = setTimeout(() => {
-        elements.toast.classList.add('translate-y-24', 'opacity-0');
+        elements.toast.classList.add('translate-y-32', 'opacity-0');
       }, 2500);
     }
 
