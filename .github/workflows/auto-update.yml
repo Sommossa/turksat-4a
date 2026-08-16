@@ -1,0 +1,42 @@
+name: Güncel Türksat Frekanslarını Çek
+
+on:
+  schedule:
+    # Her Pazartesi gece 02:00 UTC'de otomatik çalışır
+    - cron: '0 2 * * 1'
+  workflow_dispatch: # İsterseniz GitHub panelinden tek tıkla elle de başlatabilirsiniz
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Repoya dosya yazma izni
+
+    steps:
+      - name: Repoyu Klonla
+        uses: actions/checkout@v4
+
+      - name: Python Ortamını Kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Kütüphaneleri Yükle
+        run: pip install requests beautifulsoup4
+
+      - name: Verileri Güncelle
+        run: python scraper.py
+
+      - name: Değişiklikleri Push Et
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
+          git add kanallar.json
+          if git diff --staged --quiet; then
+            echo "Yeni bir kanal değişikliği yok."
+          else
+            git commit -m "chore: Türksat kanal frekansları güncellendi"
+            git push
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
