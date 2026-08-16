@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="tr" class="h-full bg-slate-950 text-slate-100">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Türksat Frekans Rehberi & Hızlı Arama</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Fuse.js for Fuzzy Search -->
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdfa',
+              500: '#14b8a6',
+              600: '#0d9488',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="min-h-full flex flex-col antialiased selection:bg-teal-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="border-b border-slate-800 bg-slate-900/60 backdrop-blur sticky top-0 z-30">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-teal-400 font-bold text-xl shadow-inner">
+          📡
+        </div>
+        <div>
+          <h1 class="text-lg font-semibold tracking-tight text-white">Türksat Frekans Bulucu</h1>
+          <p class="text-xs text-slate-400">Güncel uydu parametreleri ve hızlı arama</p>
+        </div>
+      </div>
+      <div id="stats" class="text-xs bg-slate-800/80 px-3 py-1.5 rounded-full border border-slate-700 text-slate-300">
+        Yükleniyor...
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="flex-1 max-w-6xl w-full mx-auto px-4 py-6">
+    
+    <!-- Arama & Filtre Paneli -->
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 md:p-5 shadow-xl mb-6 space-y-4">
+      <!-- Arama Çubuğu -->
+      <div class="relative">
+        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+        </div>
+        <input 
+          type="text" 
+          id="searchInput"
+          placeholder="Kanal adı, paket veya frekans yazın... (Örn: TRT, ATV, 12053)"
+          class="w-full pl-11 pr-10 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition"
+          autocomplete="off"
+        >
+        <button id="clearSearch" class="hidden absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-slate-200">
+          ✕
+        </button>
+      </div>
+
+      <!-- Filtre Seçenekleri -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 pt-1">
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Kapsama</label>
+          <select id="filterKapsama" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-teal-500">
+            <option value="">Tümü</option>
+            <option value="Batı">Batı</option>
+            <option value="Doğu">Doğu</option>
+            <option value="Türkiye">Türkiye</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Polarizasyon</label>
+          <select id="filterPol" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-teal-500">
+            <option value="">Tümü (V / H)</option>
+            <option value="V">V (Dikey)</option>
+            <option value="H">H (Yatay)</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Yayın Türü</label>
+          <select id="filterTur" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-teal-500">
+            <option value="">Tümü</option>
+            <option value="TV">TV</option>
+            <option value="RADYO">Radyo</option>
+          </select>
+        </div>
+
+        <div class="flex items-end">
+          <button id="resetFilters" class="w-full py-2 px-3 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white rounded-lg text-sm transition border border-slate-700">
+            Filtreleri Sıfırla
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sonuçlar Listesi -->
+    <div id="resultsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <!-- Kartlar dinamik olarak eklenecek -->
+    </div>
+
+    <!-- Sonuç Bulunamadı / Yükleme Durumu -->
+    <div id="statusMessage" class="hidden text-center py-16">
+      <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-slate-900 border border-slate-800 text-2xl mb-4">
+        🔍
+      </div>
+      <h3 class="text-base font-medium text-slate-300" id="statusTitle">Sonuç bulunamadı</h3>
+      <p class="text-sm text-slate-500 mt-1" id="statusDesc">Arama kriterlerinizi değiştirip tekrar deneyin.</p>
+    </div>
+
+    <!-- Sayfalama / Daha Fazla Yükle -->
+    <div id="pagination" class="hidden text-center py-8">
+      <button id="loadMoreBtn" class="px-6 py-2.5 bg-slate-900 hover:bg-slate-800 border border-slate-700 text-teal-400 hover:text-teal-300 font-medium rounded-xl text-sm transition shadow">
+        Daha Fazla Göster
+      </button>
+    </div>
+
+  </main>
+
+  <!-- Toast Bildirimi -->
+  <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition duration-300 bg-teal-600 text-white text-sm font-medium px-4 py-2.5 rounded-xl shadow-lg flex items-center space-x-2">
+    <span>✓</span>
+    <span id="toastMsg">Frekans panoya kopyalandı!</span>
+  </div>
+
+  <!-- JavaScript Kodları -->
+  <script>
+    let allChannels = [];
+    let filteredChannels = [];
+    let displayedCount = 0;
+    const PAGE_SIZE = 24;
+    let fuse = null;
+
+    // DOM Elementleri
+    const searchInput = document.getElementById('searchInput');
+    const clearSearch = document.getElementById('clearSearch');
+    const filterKapsama = document.getElementById('filterKapsama');
+    const filterPol = document.getElementById('filterPol');
+    const filterTur = document.getElementById('filterTur');
+    const resetFilters = document.getElementById('resetFilters');
+    const resultsContainer = document.getElementById('resultsContainer');
+    const stats = document.getElementById('stats');
+    const statusMessage = document.getElementById('statusMessage');
+    const statusTitle = document.getElementById('statusTitle');
+    const statusDesc = document.getElementById('statusDesc');
+    const pagination = document.getElementById('pagination');
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+    const toast = document.getElementById('toast');
+
+    // JSON Verisini Çek
+    async function loadChannels() {
+      try {
+        const res = await fetch('kanallar.json');
+        if (!res.ok) throw new Error('kanallar.json dosyası yüklenemedi.');
+        allChannels = await res.json();
+        
+        // Fuzzy Arama Motorunu Başlat
+        fuse = new Fuse(allChannels, {
+          keys: ['kanal', 'paket', 'frekans'],
+          threshold: 0.35,
+          distance: 100
+        });
+
+        applyFilters();
+      } catch (err) {
+        showStatus('Veri Yüklenemedi', 'Lütfen `kanallar.json` dosyasının dizinde olduğundan emin olun.');
+        stats.textContent = 'Veri hatası';
+      }
+    }
+
+    // Filtreleme ve Arama Mantığı
+    function applyFilters() {
+      const query = searchInput.value.trim();
+      const kapsama = filterKapsama.value;
+      const pol = filterPol.value;
+      const tur = filterTur.value;
+
+      clearSearch.classList.toggle('hidden', query.length === 0);
+
+      let results = allChannels;
+
+      // 1. Metin Araması
+      if (query.length > 0 && fuse) {
+        results = fuse.search(query).map(item => item.item);
+      }
+
+      // 2. Kriter Filtreleri
+      results = results.filter(item => {
+        const matchKapsama = !kapsama || (item.kapsama && item.kapsama.toLowerCase().includes(kapsama.toLowerCase()));
+        const matchPol = !pol || (item.polarizasyon && item.polarizasyon.toUpperCase() === pol);
+        const matchTur = !tur || (item.tur && item.tur.toUpperCase().includes(tur));
+        return matchKapsama && matchPol && matchTur;
+      });
+
+      filteredChannels = results;
+      displayedCount = 0;
+      resultsContainer.innerHTML = '';
+      
+      stats.textContent = `Toplam ${allChannels.length} / Gösterilen: ${filteredChannels.length}`;
+
+      if (filteredChannels.length === 0) {
+        showStatus('Sonuç Bulunamadı', 'Farklı bir kanal adı veya filtre kombinasyonu deneyin.');
+        pagination.classList.add('hidden');
+      } else {
+        hideStatus();
+        renderNextBatch();
+      }
+    }
+
+    // Kartları DOM'a Ekleme (Performans için parçalı render)
+    function renderNextBatch() {
+      const nextBatch = filteredChannels.slice(displayedCount, displayedCount + PAGE_SIZE);
+      const fragment = document.createDocumentFragment();
+
+      nextBatch.forEach(item => {
+        const card = document.createElement('div');
+        card.className = "bg-slate-900/90 border border-slate-800 hover:border-slate-700 rounded-xl p-4 flex flex-col justify-between transition hover:-translate-y-0.5 hover:shadow-lg relative group";
+
+        const polColor = item.polarizasyon === 'V' ? 'bg-amber-500/10 text-amber-400 border-amber-500/20' : 'bg-blue-500/10 text-blue-400 border-blue-500/20';
+
+        card.innerHTML = `
+          <div>
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h2 class="font-bold text-white text-base leading-snug group-hover:text-teal-400 transition line-clamp-1" title="${item.kanal}">
+                ${item.kanal}
+              </h2>
+              <span class="text-[11px] font-semibold px-2 py-0.5 rounded border ${polColor}">
+                ${item.polarizasyon || '-'}
+              </span>
+            </div>
+            
+            <p class="text-xs text-slate-400 mb-3 truncate" title="${item.paket || 'Paket bilgisi yok'}">
+              📁 ${item.paket || 'Tekil Kanal'}
+            </p>
+
+            <div class="grid grid-cols-2 gap-2 bg-slate-950/70 p-2.5 rounded-lg border border-slate-800/80 text-xs mb-3">
+              <div>
+                <span class="text-slate-500 block text-[10px] uppercase">Frekans</span>
+                <span class="font-mono font-semibold text-slate-200">${item.frekans || '-'} MHz</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block text-[10px] uppercase">Sembol (SR)</span>
+                <span class="font-mono font-semibold text-slate-200">${item.sembol || '-'}</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block text-[10px] uppercase">FEC</span>
+                <span class="font-mono text-slate-300">${item.fec || '-'}</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block text-[10px] uppercase">Kapsama</span>
+                <span class="text-slate-300">${item.kapsama || '-'}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between pt-1 text-xs">
+            <span class="text-[11px] text-slate-500 font-medium">${item.tur || 'TV'}</span>
+            <button 
+              onclick="copyParams('${item.frekans}', '${item.polarizasyon}', '${item.sembol}', '${item.fec}')" 
+              class="inline-flex items-center space-x-1 text-teal-400 hover:text-teal-300 bg-teal-500/10 hover:bg-teal-500/20 px-2.5 py-1 rounded-md transition font-medium text-[11px]"
+            >
+              <span>📋 Frekansı Kopyala</span>
+            </button>
+          </div>
+        `;
+        fragment.appendChild(card);
+      });
+
+      resultsContainer.appendChild(fragment);
+      displayedCount += nextBatch.length;
+
+      // Sayfalama butonunu göster/gizle
+      if (displayedCount < filteredChannels.length) {
+        pagination.classList.remove('hidden');
+      } else {
+        pagination.classList.add('hidden');
+      }
+    }
+
+    // Panoya Kopyalama Fonksiyonu
+    window.copyParams = function(frekans, pol, sembol, fec) {
+      const text = `${frekans} ${pol} ${sembol} FEC: ${fec}`;
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(`Kopyalandı: ${text}`);
+      }).catch(() => {
+        showToast('Kopyalama başarısız oldu.');
+      });
+    };
+
+    function showToast(msg) {
+      document.getElementById('toastMsg').textContent = msg;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 2500);
+    }
+
+    function showStatus(title, desc) {
+      statusTitle.textContent = title;
+      statusDesc.textContent = desc;
+      statusMessage.classList.remove('hidden');
+    }
+
+    function hideStatus() {
+      statusMessage.classList.add('hidden');
+    }
+
+    // Event Dinleyicileri
+    searchInput.addEventListener('input', applyFilters);
+    filterKapsama.addEventListener('change', applyFilters);
+    filterPol.addEventListener('change', applyFilters);
+    filterTur.addEventListener('change', applyFilters);
+
+    clearSearch.addEventListener('click', () => {
+      searchInput.value = '';
+      applyFilters();
+      searchInput.focus();
+    });
+
+    resetFilters.addEventListener('click', () => {
+      searchInput.value = '';
+      filterKapsama.value = '';
+      filterPol.value = '';
+      filterTur.value = '';
+      applyFilters();
+    });
+
+    loadMoreBtn.addEventListener('click', renderNextBatch);
+
+    // Başlat
+    loadChannels();
+  </script>
+</body>
+</html>
