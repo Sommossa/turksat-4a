@@ -52,7 +52,7 @@
         <input 
           type="text" 
           id="searchInput"
-          placeholder="Kanal, paket veya frekans ara (Örn: ATV, 12053)..."
+          placeholder="Kanal, paket veya frekans ara (Örn: STAR, 12053)..."
           class="w-full pl-11 pr-10 py-3.5 rounded-xl bg-slate-950 border border-slate-700 text-white placeholder-slate-500 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-teal-500 transition shadow-inner"
           autocomplete="off"
         >
@@ -70,6 +70,8 @@
             <option value="Batı">Batı</option>
             <option value="Doğu">Doğu</option>
             <option value="Türkiye">Türkiye</option>
+            <option value="Afrika">Afrika</option>
+            <option value="Ka-West">Ka-West</option>
           </select>
         </div>
 
@@ -158,10 +160,17 @@
         if (!res.ok) throw new Error('Yüklenemedi');
         allChannels = await res.json();
         
+        // Yeni Ağırlıklandırılmış Fuse.js Ayarları
         fuse = new Fuse(allChannels, {
-          keys: ['kanal', 'paket', 'frekans'],
-          threshold: 0.3,
-          distance: 100
+          keys: [
+            { name: 'kanal', weight: 2.0 },
+            { name: 'frekans', weight: 1.0 },
+            { name: 'paket', weight: 0.5 }
+          ],
+          threshold: 0.2,
+          distance: 100,
+          ignoreLocation: true,
+          useExtendedSearch: true
         });
 
         applyFilters();
@@ -181,8 +190,28 @@
 
       let results = allChannels;
 
+      // Yeni Arama Mantığı (Tam eşleşme önceliği)
       if (query.length > 0 && fuse) {
-        results = fuse.search(query).map(item => item.item);
+        let searchResults = fuse.search(query).map(item => item.item);
+        const queryLower = query.toLowerCase();
+        
+        results = searchResults.sort((a, b) => {
+          const aKanal = a.kanal.toLowerCase();
+          const bKanal = b.kanal.toLowerCase();
+          
+          // 1. Kural: Birebir eşitse en üste çıkar
+          if (aKanal === queryLower) return -1;
+          if (bKanal === queryLower) return 1;
+          
+          // 2. Kural: Aranan kelimeyle tam olarak başlıyorsa üste çıkar
+          const startsWithA = aKanal.startsWith(queryLower + ' ');
+          const startsWithB = bKanal.startsWith(queryLower + ' ');
+          
+          if (startsWithA && !startsWithB) return -1;
+          if (!startsWithA && startsWithB) return 1;
+          
+          return 0; 
+        });
       }
 
       results = results.filter(item => {
@@ -281,7 +310,6 @@
       elements.pagination.classList.toggle('hidden', displayedCount >= filteredChannels.length);
     }
 
-    // Kopyalama Formatı (Uydu alıcılarının kabul edeceği standart ham format)
     window.copyParams = function(frekans, pol, sembol, fec) {
       const text = `${frekans} ${pol} ${sembol} FEC: ${fec}`;
       navigator.clipboard.writeText(text).then(() => {
@@ -310,7 +338,6 @@
       elements.statusMessage.classList.add('hidden');
     }
 
-    // Event Dinleyiciler
     elements.searchInput.addEventListener('input', applyFilters);
     elements.filterKapsama.addEventListener('change', applyFilters);
     elements.filterPol.addEventListener('change', applyFilters);
