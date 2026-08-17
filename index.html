@@ -215,7 +215,6 @@
   </div>
 
   <script>
-    // --- TEMEL ARAMA VE SAYFA MANTIĞI ---
     let allChannels = [];
     let filteredChannels = [];
     let displayedCount = 0;
@@ -261,7 +260,33 @@
       try {
         const res = await fetch('kanallar.json');
         if (!res.ok) throw new Error('Yüklenemedi');
-        allChannels = await res.json();
+        let rawChannels = await res.json();
+        
+        // --- BAŞLANGIÇTA İSTENEN KANALLARI EN ÜSTE ALAN ALGORİTMA ---
+        const priorityKeywords = [
+          "halk tv", "atv", "star tv", "kanal d", "show tv", 
+          "now", "tv8", "kanal 7", "beyaz tv", "tv100", "tv 100", 
+          "trt 1", "dmax", "tlc"
+        ];
+
+        function getPriority(channelName) {
+          const name = channelName.toLowerCase().trim();
+          for (let i = 0; i < priorityKeywords.length; i++) {
+            const kw = priorityKeywords[i];
+            // Tam eşleşme veya HD/SD gibi ekleri algılamak için boşlukla başlıyorsa (Örn: "ATV HD")
+            if (name === kw || name.startsWith(kw + " ")) {
+              return i;
+            }
+          }
+          return 999;
+        }
+
+        allChannels = rawChannels.sort((a, b) => {
+          const pA = getPriority(a.kanal);
+          const pB = getPriority(b.kanal);
+          if (pA !== pB) return pA - pB;
+          return 0; 
+        });
         
         fuse = new Fuse(allChannels, {
           keys: [
@@ -433,9 +458,7 @@
 
     loadChannels();
 
-
     // --- AI KURULUM ASİSTANI MANTIĞI ---
-
     function openGuideModal() {
       const modal = document.getElementById('guideModal');
       modal.classList.remove('hidden');
@@ -536,14 +559,14 @@
               <li>Uydu listesinden <b>Türksat 42.0E</b> uydusunu bulun ve aktif edin.</li>
               <li><span class="text-amber-400 font-semibold">Merkezi sistem ayarı için:</span> Uydu yapılandırması altından <b>DiSEqC 1.0</b> ayarını <b>LNB 1</b> (veya A) konumuna getirin. Sinyal gücü gelecektir.</li>
               <li>Arama seçeneklerinde <b>TKGS</b> seçeneğini görüyorsanız, TKGS çalışma modunu <b>Esnek</b> veya <b>Otomatik</b> yapıp "Çalıştır" deyin.</li>
-              <li><span class="text-amber-400 font-semibold">TKGS yoksa:</span> <b>Manuel Tarama (TP Tarama)</b> menüsüne girip kopyaladığınız frekans, polarizasyon ve sembol oranını girerek <b>Ağ Arama / Şebeke Tarama</b> seçeneğini Açık yapıp taratın.</li>
+              <li><span class="text-amber-400 font-semibold">TKGS yoksa:</span> <b>Manuel Tarama (TP Tarama)</b> menüsüne girip 12380 Frekans, V (Dikey) Polarizasyon, 27500 Sembol Oranı girerek <b>Ağ Arama / Şebeke Tarama</b> seçeneğini Açık yapıp taratın.</li>
             </ol>
           </div>
         `
       },
       {
         keys: ['linux', 'eski', 'smart', 'axen', 'dijitsu'],
-        name: 'ESKİ SMART TV / LINUX (Axen, Dijitsu, Onvo vb.)',
+        name: 'ESKİ SMART TV / LINUX (Axen, Dijitsu, Onvo Eski Modelleri)',
         content: `
           <div class="mb-5">
             <h4 class="text-teal-400 font-bold mb-3 flex items-center gap-2 text-base">🔄 Fabrika Ayarlarına Sıfırlama</h4>
@@ -561,8 +584,8 @@
               <li>Giriş kaynağının <b>Uydu (DVB-S2)</b> olduğundan emin olun.</li>
               <li><b>Anten Ayarları</b> menüsünden <b>Türksat 42E</b> uydusunu seçin. Apartman ortak sistemi varsa DiSEqC 1.0 ayarını LNB 1 yapın.</li>
               <li>Bu cihazlarda genellikle TKGS bulunmaz. Bu yüzden <b>Manuel Arama / Transponder Ekleme</b> menüsüne gidin.</li>
-              <li>Kumandanın renkli tuşlarını (genelde <b>Yeşil</b> veya <b>Kırmızı</b>) kullanarak yeni bir frekans ekleyin: <b>12380 V (Dikey) 27500</b>.</li>
-              <li>Frekansı kaydettikten sonra üzerindeyken kumandadan <b>Mavi (Tarama)</b> tuşuna basın. Açılan küçük pencerede <b>Ağ Arama (Network Search)</b> seçeneğini mutlaka <b>AÇIK</b> yapın ve aramayı başlatın.</li>
+              <li>Kumandanın renkli tuşlarını (genelde <b>Yeşil</b> veya <b>Kırmızı</b>) kullanarak yeni bir frekans ekleyin: <b>Frekans: 12380, Polarizasyon: V (Dikey), Sembol Oranı: 27500</b>.</li>
+              <li>Frekansı kaydettikten sonra üzerindeyken kumandadan <b>Mavi (Tarama)</b> tuşuna basın. Açılan küçük pencerede <b>Ağ Arama (Network Search)</b> seçeneğini mutlaka <b>AÇIK</b> yapın ve aramayı başlatın. Bu sayede TV tüm güncel kanalları otomatik indirecektir.</li>
             </ol>
           </div>
         `
@@ -572,8 +595,8 @@
         name: 'Vestel / Toshiba / Regal Grubu',
         content: `
           <div class="mb-4">
-            <h4 class="text-teal-400 font-bold mb-2 flex items-center gap-2">📡 Uydu Kurulumu</h4>
-            <ol class="list-decimal list-inside space-y-1.5 text-slate-300 text-sm">
+            <h4 class="text-teal-400 font-bold mb-2 flex items-center gap-2 text-base">📡 Uydu Kurulumu</h4>
+            <ol class="list-decimal list-inside space-y-1.5 text-slate-300 text-sm sm:text-base">
               <li>Kumandadan <b>Menü</b> tuşuna basın.</li>
               <li><b>Kurulum</b> veya <b>Kanal Ayarları</b> menüsünü açın.</li>
               <li><b>Manuel Kanal Arama</b> seçeneğine tıklayın.</li>
@@ -588,8 +611,8 @@
         name: 'Arçelik / Beko / Grundig Grubu',
         content: `
           <div class="mb-4">
-            <h4 class="text-teal-400 font-bold mb-2 flex items-center gap-2">📡 Uydu Kurulumu</h4>
-            <ol class="list-decimal list-inside space-y-1.5 text-slate-300 text-sm">
+            <h4 class="text-teal-400 font-bold mb-2 flex items-center gap-2 text-base">📡 Uydu Kurulumu</h4>
+            <ol class="list-decimal list-inside space-y-1.5 text-slate-300 text-sm sm:text-base">
               <li>Kumandadan <b>Menü</b> tuşuna basın.</li>
               <li><b>Kaynak Ayarları</b> veya <b>Ayarlar</b> menüsüne girin.</li>
               <li><b>Manuel Kanal Arama</b> seçeneğini bulun.</li>
@@ -608,7 +631,6 @@
       
       if(!input) return;
 
-      // Yükleniyor...
       responseContainer.classList.remove('hidden');
       contentDiv.innerHTML = `<div class="flex items-center gap-2 text-teal-400 font-bold"><svg class="animate-spin -ml-1 mr-2 h-5 w-5 text-teal-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Analiz ediliyor...</div>`;
 
@@ -644,7 +666,7 @@
           `;
         }
 
-        // Google'a Yönlendiren Şık ve Güvenli Buton
+        // Google'a Yönlendiren Şık ve Güvenli Buton (window.open ile yeni sekme)
         html += `
           <div class="mt-6 pt-5 border-t border-slate-700">
             <p class="text-sm text-slate-400 mb-3">Görsel bir desteğe mi ihtiyacınız var? Sizin için hazırladığım şu videolu arama sonuçlarına göz atın:</p>
