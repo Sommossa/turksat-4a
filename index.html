@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Türksat Frekans Rehberi & Hızlı Arama</title>
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Fuse.js -->
   <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
   <script>
     tailwind.config = {
@@ -20,61 +18,63 @@
 </head>
 <body class="min-h-full flex flex-col antialiased selection:bg-teal-500 selection:text-white">
 
-  <!-- Header -->
-  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur-md sticky top-0 z-30">
-    <div class="max-w-6xl mx-auto px-4 py-3 sm:py-4 flex flex-wrap items-center justify-between gap-3">
-      <div class="flex items-center space-x-3">
-        <div class="w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-2xl shadow-inner">
+  <header class="border-b border-slate-800 bg-slate-900/90 backdrop-blur-md sticky top-0 z-30">
+    <div class="max-w-6xl mx-auto px-3 py-2.5 sm:py-3 flex items-center justify-between gap-2">
+      
+      <div class="flex items-center space-x-2 shrink-0">
+        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-base sm:text-xl shadow-inner">
           📡
         </div>
-        <div>
-          <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-white">Türksat Frekans</h1>
-          <p class="text-xs sm:text-sm text-slate-400">Güncel kanal listesi</p>
+        <div class="flex flex-col justify-center">
+          <h1 class="text-sm sm:text-lg font-bold tracking-tight text-white leading-none">Türksat Frekans</h1>
+          <p class="hidden sm:block text-[11px] text-slate-400 mt-0.5">Güncel kanal listesi</p>
         </div>
       </div>
-      <div id="stats" class="text-sm font-semibold bg-slate-800/80 px-4 py-2 rounded-lg border border-slate-700 text-slate-300">
-        Yükleniyor...
+      
+      <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+        <button onclick="openGuideModal()" class="flex items-center justify-center gap-1 text-xs sm:text-sm font-bold bg-slate-800 border border-slate-700 hover:border-purple-500/50 hover:bg-slate-700/80 text-white px-2.5 py-1.5 sm:px-4 sm:py-2 rounded-lg shadow transition-all">
+          <span class="text-sm sm:text-base leading-none">🪄</span>
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-teal-400">AI Asistan</span>
+        </button>
+        <div id="stats" class="text-xs sm:text-sm font-bold bg-slate-800/80 px-2.5 py-1.5 sm:px-4 sm:py-2 rounded-lg border border-slate-700 text-slate-200 shadow-inner whitespace-nowrap">
+          ...
+        </div>
       </div>
     </div>
   </header>
 
-  <!-- Main -->
-  <main class="flex-1 max-w-6xl w-full mx-auto px-4 py-6 sm:py-8">
+  <main class="flex-1 max-w-6xl w-full mx-auto px-4 py-4 sm:py-6">
     
-    <!-- Filtre Paneli -->
-    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-5 sm:p-6 shadow-xl mb-6 sm:mb-8">
+    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-4 sm:p-6 shadow-xl mb-6">
       
-      <!-- Belirginleştirilmiş Arama Çubuğu -->
       <div class="relative">
-        <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none text-teal-400">
-          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        <div class="absolute inset-y-0 left-0 pl-4 sm:pl-5 flex items-center pointer-events-none text-teal-400">
+          <svg class="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
         </div>
         <input 
           type="text" 
           id="searchInput"
-          placeholder="Kanal adını buraya yazın..."
-          class="w-full pl-16 pr-14 py-4 sm:py-5 rounded-2xl bg-slate-950 border-2 border-teal-500 text-white placeholder-slate-400 text-lg sm:text-xl font-bold focus:outline-none focus:ring-4 focus:ring-teal-500/40 transition shadow-inner"
+          placeholder="Kanal adını yazın..."
+          class="w-full pl-12 pr-12 py-3 sm:pl-16 sm:pr-14 sm:py-4 rounded-2xl bg-slate-950 border-2 border-teal-500/80 focus:border-teal-400 text-white placeholder-slate-500 text-base sm:text-xl font-bold focus:outline-none focus:ring-4 focus:ring-teal-500/30 transition shadow-inner"
           autocomplete="off"
         >
-        <button id="clearSearch" class="hidden absolute inset-y-0 right-0 pr-4 flex items-center text-slate-400 hover:text-white">
-          <div class="bg-slate-800 rounded-full p-2 border border-slate-700 shadow">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        <button id="clearSearch" class="hidden absolute inset-y-0 right-0 pr-3 sm:pr-4 flex items-center text-slate-400 hover:text-white">
+          <div class="bg-slate-800 rounded-full p-1.5 sm:p-2 border border-slate-700 shadow">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
           </div>
         </button>
       </div>
 
-      <!-- Mobil İçin Filtreleri Göster / Gizle Butonu -->
-      <button id="toggleFiltersBtn" class="w-full md:hidden flex items-center justify-center gap-2 mt-5 py-3.5 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 rounded-xl text-base font-bold transition shadow">
-        <svg id="filterIcon" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      <button id="toggleFiltersBtn" class="w-full md:hidden flex items-center justify-center gap-2 mt-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 rounded-xl text-sm font-bold transition shadow">
+        <svg id="filterIcon" class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         <span id="filterBtnText">Detaylı Filtreleri Göster</span>
       </button>
 
-      <!-- Select Filtreleri (Mobilde Gizli) -->
-      <div id="filterSectionWrapper" class="hidden md:block mt-5 pt-5 border-t border-slate-800 md:mt-6 md:pt-0 md:border-0">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div id="filterSectionWrapper" class="hidden md:block mt-4 pt-4 border-t border-slate-800 md:mt-5 md:pt-0 md:border-0">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
           <div class="flex flex-col">
-            <label class="text-sm font-semibold text-slate-400 mb-2">Kapsama</label>
-            <select id="filterKapsama" class="bg-slate-950 border-2 border-slate-800 rounded-xl px-4 py-3.5 text-base text-slate-200 font-medium focus:ring-2 focus:ring-teal-500 focus:outline-none">
+            <label class="text-[11px] sm:text-sm font-semibold text-slate-400 mb-1.5">Kapsama</label>
+            <select id="filterKapsama" class="bg-slate-950 border-2 border-slate-800 rounded-xl px-3 py-2.5 sm:py-3.5 text-sm sm:text-base text-slate-200 font-medium focus:ring-2 focus:ring-teal-500 focus:outline-none">
               <option value="">Tümü</option>
               <option value="Batı">Batı</option>
               <option value="Doğu">Doğu</option>
@@ -85,8 +85,8 @@
           </div>
 
           <div class="flex flex-col">
-            <label class="text-sm font-semibold text-slate-400 mb-2">Polarizasyon</label>
-            <select id="filterPol" class="bg-slate-950 border-2 border-slate-800 rounded-xl px-4 py-3.5 text-base text-slate-200 font-medium focus:ring-2 focus:ring-teal-500 focus:outline-none">
+            <label class="text-[11px] sm:text-sm font-semibold text-slate-400 mb-1.5">Polarizasyon</label>
+            <select id="filterPol" class="bg-slate-950 border-2 border-slate-800 rounded-xl px-3 py-2.5 sm:py-3.5 text-sm sm:text-base text-slate-200 font-medium focus:ring-2 focus:ring-teal-500 focus:outline-none">
               <option value="">Tümü</option>
               <option value="V">V (Dikey)</option>
               <option value="H">H (Yatay)</option>
@@ -94,53 +94,105 @@
           </div>
 
           <div class="flex flex-col">
-            <label class="text-sm font-semibold text-slate-400 mb-2">Tür</label>
-            <select id="filterTur" class="bg-slate-950 border-2 border-slate-800 rounded-xl px-4 py-3.5 text-base text-slate-200 font-medium focus:ring-2 focus:ring-teal-500 focus:outline-none">
+            <label class="text-[11px] sm:text-sm font-semibold text-slate-400 mb-1.5">Tür</label>
+            <select id="filterTur" class="bg-slate-950 border-2 border-slate-800 rounded-xl px-3 py-2.5 sm:py-3.5 text-sm sm:text-base text-slate-200 font-medium focus:ring-2 focus:ring-teal-500 focus:outline-none">
               <option value="">Tümü</option>
               <option value="TV">📺 TV</option>
               <option value="RADYO">📻 Radyo</option>
             </select>
           </div>
 
-          <div class="flex items-end">
-            <button id="resetFilters" class="w-full py-3.5 px-4 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-xl text-base font-bold transition border border-slate-700 shadow">
-              Seçimleri Sıfırla
+          <div class="flex items-end col-span-2 md:col-span-1">
+            <button id="resetFilters" class="w-full py-2.5 sm:py-3.5 px-4 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-xl text-sm sm:text-base font-bold transition border border-slate-700 shadow">
+              Sıfırla
             </button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Sonuçlar Listesi (Grid) -->
-    <div id="resultsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-      <!-- Kartlar buraya gelecek -->
+    <div id="resultsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"></div>
+
+    <div id="statusMessage" class="hidden text-center py-16">
+      <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-slate-900 border-2 border-slate-800 text-3xl mb-4 shadow-inner">🔍</div>
+      <h3 class="text-xl font-bold text-white" id="statusTitle">Sonuç bulunamadı</h3>
+      <p class="text-sm text-slate-400 mt-2" id="statusDesc">Aradığınız kriterlere uygun kanal yok.</p>
     </div>
 
-    <!-- Durum Mesajları -->
-    <div id="statusMessage" class="hidden text-center py-20">
-      <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-slate-900 border-2 border-slate-800 text-4xl mb-5 shadow-inner">
-        🔍
-      </div>
-      <h3 class="text-2xl font-bold text-white" id="statusTitle">Sonuç bulunamadı</h3>
-      <p class="text-base text-slate-400 mt-3" id="statusDesc">Aradığınız isimde bir kanal bulamadık.</p>
-    </div>
-
-    <!-- Sayfalama -->
-    <div id="pagination" class="hidden text-center py-10">
-      <button id="loadMoreBtn" class="px-10 py-4 bg-slate-900 hover:bg-slate-800 border-2 border-slate-700 text-teal-400 font-bold text-lg rounded-2xl transition shadow-xl">
+    <div id="pagination" class="hidden text-center py-8">
+      <button id="loadMoreBtn" class="px-8 py-3.5 bg-slate-900 hover:bg-slate-800 border-2 border-slate-700 text-teal-400 font-bold text-base rounded-2xl transition shadow-xl w-full sm:w-auto">
         Daha Fazla Kanal Yükle
       </button>
     </div>
-
   </main>
 
-  <!-- Kopyalama Toast -->
-  <div id="toast" class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 transform translate-y-32 opacity-0 transition-all duration-300 bg-teal-500 text-slate-950 text-base font-extrabold px-6 py-4 rounded-full shadow-[0_0_30px_rgba(20,184,166,0.5)] flex items-center space-x-3 pointer-events-none">
-    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-    <span id="toastMsg">Frekans kopyalandı!</span>
+  <div id="guideModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-slate-950/80 backdrop-blur-sm p-4 opacity-0 transition-opacity duration-300">
+    <div class="bg-slate-900 border border-slate-700 rounded-3xl w-full max-w-2xl h-[85vh] sm:h-[80vh] flex flex-col shadow-2xl transform scale-95 transition-transform duration-300">
+      
+      <div class="bg-slate-900/95 backdrop-blur border-b border-slate-800 p-4 sm:p-5 flex justify-between items-center z-10 shrink-0 rounded-t-3xl">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-xl border border-slate-700 relative">
+            🤖
+            <span class="absolute -bottom-1 -right-1 w-3 h-3 bg-green-500 border-2 border-slate-900 rounded-full"></span>
+          </div>
+          <div>
+            <h2 class="text-lg sm:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-teal-400">Akıllı Kurulum Asistanı</h2>
+            <p class="text-[11px] sm:text-xs text-slate-400 font-medium">TV modelinizi yazıp adımları görebilirsiniz</p>
+          </div>
+        </div>
+        <button onclick="closeGuideModal()" class="text-slate-400 hover:text-white bg-slate-800 hover:bg-slate-700 p-2 rounded-full transition border border-slate-700">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      
+      <div class="flex-1 overflow-y-auto p-4 sm:p-6 space-y-6 flex flex-col relative bg-slate-950">
+        <div class="flex items-start gap-3">
+          <div class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-sm shrink-0 border border-slate-700 mt-1">🤖</div>
+          <div class="bg-slate-800/80 border border-slate-700 p-4 rounded-2xl rounded-tl-sm text-slate-200 text-sm sm:text-base leading-relaxed">
+            Merhaba! Kopyaladığınız frekansı cihazınıza nasıl gireceğinizi tarif edebilirim. <br><br>
+            <span class="font-bold text-teal-400">Aşağıya TV veya Uydu Alıcınızın markasını/modelini yazın (Örn: LG, Beko, Android TV, Next).</span>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-2 pl-11">
+          <button onclick="document.getElementById('deviceInput').value='Samsung'; searchDevice();" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-full text-xs font-bold text-slate-300 transition">Samsung</button>
+          <button onclick="document.getElementById('deviceInput').value='LG'; searchDevice();" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-full text-xs font-bold text-slate-300 transition">LG</button>
+          <button onclick="document.getElementById('deviceInput').value='Android TV'; searchDevice();" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-full text-xs font-bold text-slate-300 transition">Android TV / Onvo</button>
+          <button onclick="document.getElementById('deviceInput').value='Vestel'; searchDevice();" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-full text-xs font-bold text-slate-300 transition">Vestel / Beko</button>
+        </div>
+
+        <div id="aiResponseContainer" class="hidden flex items-start gap-3 pb-20">
+          <div class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-sm shrink-0 border border-slate-700 mt-1">🤖</div>
+          <div class="bg-gradient-to-b from-slate-800 to-slate-900 border border-slate-700 p-4 sm:p-5 rounded-2xl rounded-tl-sm text-slate-200 text-sm sm:text-base w-full shadow-lg">
+            <div id="aiResponseContent"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-slate-900 p-3 sm:p-4 border-t border-slate-800 shrink-0">
+        <div class="flex gap-2 relative">
+          <input 
+            type="text" 
+            id="deviceInput" 
+            placeholder="Marka/Model yazın..." 
+            class="flex-1 bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 sm:py-4 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-purple-500 transition font-medium text-sm sm:text-base"
+            onkeypress="if(event.key === 'Enter') searchDevice()"
+          >
+          <button onclick="searchDevice()" class="bg-teal-600 hover:bg-teal-500 text-slate-950 font-bold px-5 sm:px-6 py-3 sm:py-4 rounded-xl transition flex items-center justify-center text-sm sm:text-base">
+            Bul
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[200] transform translate-y-32 opacity-0 transition-all duration-300 bg-teal-500 text-slate-950 text-sm sm:text-base font-extrabold px-5 sm:px-6 py-3 sm:py-4 rounded-full shadow-[0_0_30px_rgba(20,184,166,0.5)] flex items-center space-x-2 sm:space-x-3 pointer-events-none">
+    <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+    <span id="toastMsg">Kopyalandı!</span>
   </div>
 
   <script>
+    // --- TEMEL ARAMA VE SAYFA MANTIĞI ---
     let allChannels = [];
     let filteredChannels = [];
     let displayedCount = 0;
@@ -168,7 +220,6 @@
       toast: document.getElementById('toast')
     };
 
-    // Mobil Filtre Aç/Kapat Mantığı
     let filtersOpen = false;
     elements.toggleFiltersBtn.addEventListener('click', () => {
       filtersOpen = !filtersOpen;
@@ -187,7 +238,32 @@
       try {
         const res = await fetch('kanallar.json');
         if (!res.ok) throw new Error('Yüklenemedi');
-        allChannels = await res.json();
+        let rawChannels = await res.json();
+        
+        // BAŞLANGIÇTAKİ POPÜLER KANALLAR ALGORİTMASI
+        const priorityKeywords = [
+          "halk tv", "atv", "star tv", "kanal d", "show tv", 
+          "now", "tv8", "kanal 7", "beyaz tv", "tv100", "tv 100", 
+          "trt 1", "dmax", "tlc"
+        ];
+
+        // GÜÇLENDİRİLMİŞ HATA KORUMASI (String zorlaması)
+        function getPriority(channelName) {
+          if (!channelName) return 999;
+          const name = String(channelName).toLowerCase().trim();
+          for (let i = 0; i < priorityKeywords.length; i++) {
+            const kw = priorityKeywords[i];
+            if (name === kw || name.startsWith(kw + " ")) return i;
+          }
+          return 999;
+        }
+
+        allChannels = rawChannels.sort((a, b) => {
+          const pA = getPriority(a.kanal);
+          const pB = getPriority(b.kanal);
+          if (pA !== pB) return pA - pB;
+          return 0; 
+        });
         
         fuse = new Fuse(allChannels, {
           keys: [
@@ -203,7 +279,7 @@
 
         applyFilters();
       } catch (err) {
-        showStatus('Kanal Listesi Yüklenemedi', 'İnternet bağlantınızı kontrol edin.');
+        showStatus('Kanal Listesi Yüklenemedi', 'İnternet bağlantınızı kontrol edin veya JSON dosyanızın bozuk olmadığından emin olun.');
         elements.stats.textContent = 'Hata';
       }
     }
@@ -222,34 +298,32 @@
         let searchResults = fuse.search(query).map(item => item.item);
         const queryLower = query.toLowerCase();
         
+        // GÜÇLENDİRİLMİŞ HATA KORUMASI (Boş isimlerde kodun çökmesini önler)
         results = searchResults.sort((a, b) => {
-          const aKanal = a.kanal.toLowerCase();
-          const bKanal = b.kanal.toLowerCase();
+          const aKanal = a.kanal ? String(a.kanal).toLowerCase() : "";
+          const bKanal = b.kanal ? String(b.kanal).toLowerCase() : "";
           
           if (aKanal === queryLower) return -1;
           if (bKanal === queryLower) return 1;
-          
           const startsWithA = aKanal.startsWith(queryLower + ' ');
           const startsWithB = bKanal.startsWith(queryLower + ' ');
-          
           if (startsWithA && !startsWithB) return -1;
           if (!startsWithA && startsWithB) return 1;
-          
           return 0; 
         });
       }
 
+      // GÜÇLENDİRİLMİŞ FİLTRELEME (Eksik verilerde crash olmasını engeller)
       results = results.filter(item => {
-        const matchK = !kapsama || (item.kapsama && item.kapsama.toLowerCase().includes(kapsama.toLowerCase()));
-        const matchP = !pol || (item.polarizasyon && item.polarizasyon.toUpperCase() === pol);
-        const matchT = !tur || (item.tur && item.tur.toUpperCase().includes(tur));
+        const matchK = !kapsama || (item.kapsama && String(item.kapsama).toLowerCase().includes(kapsama.toLowerCase()));
+        const matchP = !pol || (item.polarizasyon && String(item.polarizasyon).toUpperCase() === pol);
+        const matchT = !tur || (item.tur && String(item.tur).toUpperCase().includes(tur));
         return matchK && matchP && matchT;
       });
 
       filteredChannels = results;
       displayedCount = 0;
       elements.resultsContainer.innerHTML = '';
-      
       elements.stats.textContent = `${filteredChannels.length} Kanal`;
 
       if (filteredChannels.length === 0) {
@@ -267,7 +341,7 @@
 
       nextBatch.forEach(item => {
         const card = document.createElement('div');
-        card.className = "bg-slate-900 border border-slate-800 hover:border-slate-600 rounded-3xl p-5 flex flex-col justify-between transition-all shadow-lg group";
+        card.className = "bg-slate-900 border border-slate-800 hover:border-slate-600 rounded-3xl p-4 sm:p-5 flex flex-col justify-between transition-all shadow-lg group";
 
         let polDisplay = item.polarizasyon;
         if(polDisplay === 'V') polDisplay = 'V (Dikey)';
@@ -282,42 +356,40 @@
 
         card.innerHTML = `
           <div>
-            <div class="flex items-start justify-between gap-3 mb-5">
-              <h2 class="font-extrabold text-white text-xl sm:text-2xl leading-tight group-hover:text-teal-400 transition-colors line-clamp-2">
-                ${item.kanal}
+            <div class="flex items-start justify-between gap-3 mb-4">
+              <h2 class="font-extrabold text-white text-lg sm:text-2xl leading-tight group-hover:text-teal-400 transition-colors line-clamp-2">
+                ${item.kanal || 'Bilinmiyor'}
               </h2>
-              <span class="text-xs sm:text-sm font-bold px-3 py-1.5 rounded-lg border whitespace-nowrap ${polColor}">
-                ${polDisplay}
+              <span class="text-[11px] sm:text-sm font-bold px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg border whitespace-nowrap ${polColor}">
+                ${polDisplay || '-'}
               </span>
             </div>
 
-            <div class="space-y-4 bg-slate-950/70 p-5 rounded-2xl border border-slate-800">
-              <div class="flex justify-between items-center border-b border-slate-800/80 pb-3">
-                <span class="text-slate-400 font-semibold text-sm sm:text-base">Frekans</span>
-                <span class="font-mono font-black text-slate-100 text-lg sm:text-xl tracking-wide">${item.frekans} <span class="text-xs text-slate-500 font-sans">MHz</span></span>
+            <div class="space-y-3 sm:space-y-4 bg-slate-950/70 p-4 sm:p-5 rounded-2xl border border-slate-800">
+              <div class="flex justify-between items-center border-b border-slate-800/80 pb-2.5 sm:pb-3">
+                <span class="text-slate-400 font-semibold text-xs sm:text-base">Frekans</span>
+                <span class="font-mono font-black text-slate-100 text-base sm:text-xl tracking-wide">${item.frekans || '-'} <span class="text-[10px] sm:text-xs text-slate-500 font-sans">MHz</span></span>
               </div>
-              
-              <div class="flex justify-between items-center border-b border-slate-800/80 pb-3">
-                <span class="text-slate-400 font-semibold text-sm sm:text-base">Sembol</span>
-                <span class="font-mono font-bold text-slate-200 text-base sm:text-lg">${item.sembol} <span class="text-slate-600 mx-1">/</span> ${item.fec}</span>
+              <div class="flex justify-between items-center border-b border-slate-800/80 pb-2.5 sm:pb-3">
+                <span class="text-slate-400 font-semibold text-xs sm:text-base">Sembol</span>
+                <span class="font-mono font-bold text-slate-200 text-sm sm:text-lg">${item.sembol || '-'} <span class="text-slate-600 mx-1">/</span> ${item.fec || '-'}</span>
               </div>
-              
-              <div class="flex justify-between items-center text-sm sm:text-base">
+              <div class="flex justify-between items-center text-xs sm:text-base">
                 <span class="text-slate-400 font-semibold">Kapsama</span>
                 <span class="font-bold text-slate-200">${item.kapsama || '-'}</span>
               </div>
             </div>
           </div>
-
-          <div class="flex items-center justify-between mt-5 pt-4 border-t border-slate-800">
-            <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-sm font-bold ${turColor}">
+          <div class="flex items-center justify-between mt-4 sm:mt-5 pt-4 border-t border-slate-800">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-lg text-xs sm:text-sm font-bold ${turColor}">
               ${turIcon} ${item.tur || 'TV'}
             </span>
             <button 
-              onclick="copyParams('${item.frekans}', '${item.polarizasyon}', '${item.sembol}', '${item.fec}')" 
-              class="inline-flex items-center gap-2 text-sm sm:text-base font-bold text-teal-400 hover:text-teal-300 bg-teal-500/10 hover:bg-teal-500/20 px-5 py-3 rounded-xl transition-colors border border-teal-500/20"
+              data-kanal="${item.kanal}" data-frekans="${item.frekans}" data-pol="${polDisplay}" data-sembol="${item.sembol}" data-fec="${item.fec}"
+              onclick="copyParams(this)" 
+              class="inline-flex items-center gap-1.5 sm:gap-2 text-xs sm:text-base font-bold text-teal-400 hover:text-teal-300 bg-teal-500/10 hover:bg-teal-500/20 px-4 py-2.5 sm:px-5 sm:py-3 rounded-xl transition-colors border border-teal-500/20"
             >
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+              <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
               <span>Kopyala</span>
             </button>
           </div>
@@ -327,15 +399,18 @@
 
       elements.resultsContainer.appendChild(fragment);
       displayedCount += nextBatch.length;
-
       elements.pagination.classList.toggle('hidden', displayedCount >= filteredChannels.length);
     }
 
-    window.copyParams = function(frekans, pol, sembol, fec) {
-      const text = `${frekans} ${pol} ${sembol} FEC: ${fec}`;
-      navigator.clipboard.writeText(text).then(() => {
-        showToast(`Kopyalandı: ${text}`);
-      });
+    window.copyParams = function(btn) {
+      const kanal = btn.getAttribute('data-kanal') || 'Kanal';
+      const frekans = btn.getAttribute('data-frekans') || '';
+      const pol = btn.getAttribute('data-pol') || '';
+      const sembol = btn.getAttribute('data-sembol') || '';
+      const fec = btn.getAttribute('data-fec') || '';
+      
+      const text = `${kanal} - ${frekans} ${pol} ${sembol} FEC: ${fec}`;
+      navigator.clipboard.writeText(text).then(() => showToast(`Kopyalandı: ${kanal}`));
     };
 
     let toastTimer;
@@ -343,10 +418,7 @@
       clearTimeout(toastTimer);
       document.getElementById('toastMsg').textContent = msg;
       elements.toast.classList.remove('translate-y-32', 'opacity-0');
-      
-      toastTimer = setTimeout(() => {
-        elements.toast.classList.add('translate-y-32', 'opacity-0');
-      }, 2500);
+      toastTimer = setTimeout(() => elements.toast.classList.add('translate-y-32', 'opacity-0'), 2500);
     }
 
     function showStatus(title, desc) {
@@ -354,33 +426,243 @@
       elements.statusDesc.textContent = desc;
       elements.statusMessage.classList.remove('hidden');
     }
-
-    function hideStatus() {
-      elements.statusMessage.classList.add('hidden');
-    }
+    function hideStatus() { elements.statusMessage.classList.add('hidden'); }
 
     elements.searchInput.addEventListener('input', applyFilters);
     elements.filterKapsama.addEventListener('change', applyFilters);
     elements.filterPol.addEventListener('change', applyFilters);
     elements.filterTur.addEventListener('change', applyFilters);
-
-    elements.clearSearch.addEventListener('click', () => {
-      elements.searchInput.value = '';
-      applyFilters();
-      elements.searchInput.focus();
-    });
-
-    elements.resetFilters.addEventListener('click', () => {
-      elements.searchInput.value = '';
-      elements.filterKapsama.value = '';
-      elements.filterPol.value = '';
-      elements.filterTur.value = '';
-      applyFilters();
-    });
-
+    elements.clearSearch.addEventListener('click', () => { elements.searchInput.value = ''; applyFilters(); elements.searchInput.focus(); });
+    elements.resetFilters.addEventListener('click', () => { elements.searchInput.value = ''; elements.filterKapsama.value = ''; elements.filterPol.value = ''; elements.filterTur.value = ''; applyFilters(); });
     elements.loadMoreBtn.addEventListener('click', renderNextBatch);
 
     loadChannels();
+
+    // --- AI KURULUM ASİSTANI MANTIĞI ---
+    function openGuideModal() {
+      const modal = document.getElementById('guideModal');
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        modal.firstElementChild.classList.remove('scale-95');
+      }, 10);
+    }
+
+    function closeGuideModal() {
+      const modal = document.getElementById('guideModal');
+      modal.classList.add('opacity-0');
+      modal.firstElementChild.classList.add('scale-95');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        document.getElementById('aiResponseContainer').classList.add('hidden');
+        document.getElementById('deviceInput').value = '';
+      }, 300);
+    }
+
+    document.getElementById('guideModal').addEventListener('click', function(e) {
+      if(e.target === this) closeGuideModal();
+    });
+
+    const deviceDatabase = [
+      {
+        keys: ['samsung', 'tizen'],
+        name: 'SAMSUNG (Tizen OS)',
+        content: `
+          <div class="mb-5">
+            <h4 class="text-teal-400 font-bold mb-3 flex items-center gap-2 text-sm sm:text-base">🔄 Fabrika Ayarlarına Sıfırlama</h4>
+            <ol class="list-decimal list-inside space-y-2 text-slate-300 text-xs sm:text-sm">
+              <li>Kumandadan <b>Home (Ev)</b> tuşuna basın ve sol alttaki <b>Ayarlar (Dişli Çark)</b> sekmesine gelin.</li>
+              <li><b>Genel ve Gizlilik</b> (Eski modellerde Genel veya Destek > Kendi Kendine Teşhis) menüsüne girin.</li>
+              <li>Listenin en altında bulunan <b>Sıfırla</b> seçeneğine tıklayın.</li>
+              <li>Ekrana gelen PIN kodu alanına değişiklik yapmadıysanız varsayılan şifre olan <b>0000</b> yazın.</li>
+              <li>TV kapanıp açılana kadar fişini çekmeyin.</li>
+            </ol>
+          </div>
+          <div>
+            <h4 class="text-teal-400 font-bold mb-3 flex items-center gap-2 text-sm sm:text-base">📡 Uydu Kurulumu (TKGS & Manuel)</h4>
+            <ol class="list-decimal list-inside space-y-2 text-slate-300 text-xs sm:text-sm">
+              <li><b>Ayarlar</b> > <b>Tüm Ayarlar</b> > <b>Yayın</b> menüsüne girin.</li>
+              <li><b>Uzman Ayarları</b> seçeneğine tıklayın.</li>
+              <li><b>Uydu Sistemi</b> bölümüne girerek (şifre isterse 0000) <b>Uydu Seçimi</b> kısmından <b>Türksat 42E</b> uydusunun seçili olduğundan emin olun.</li>
+              <li><span class="text-amber-400 font-semibold">Merkezi sistem (Apartman) kullanıyorsanız:</span> LNB Ayarları'na girip <b>DiSEqC Modu</b> ayarını 1/4 veya A yapın. Sinyal kalitesinin yükseldiğini görünce geri gelin.</li>
+              <li>Yayın ana menüsüne geri dönüp <b>Otomatik Ayarlama</b> seçeneğine basın.</li>
+              <li>Arama tipini <b>TKGS</b> (Türksat Kanal Güncelleme Sistemi) seçerek başlatın.</li>
+            </ol>
+          </div>
+        `
+      },
+      {
+        keys: ['lg', 'webos'],
+        name: 'LG (webOS)',
+        content: `
+          <div class="mb-5">
+            <h4 class="text-teal-400 font-bold mb-3 flex items-center gap-2 text-sm sm:text-base">🔄 Fabrika Ayarlarına Sıfırlama</h4>
+            <ol class="list-decimal list-inside space-y-2 text-slate-300 text-xs sm:text-sm">
+              <li>Kumandadaki <b>Ayarlar (Dişli Çark)</b> tuşuna basın. Ekranın sağında çıkan menüden en alttaki <b>Tüm Ayarlar (Üç Nokta)</b> seçeneğine tıklayın.</li>
+              <li><b>Genel</b> menüsüne giriş yapın.</li>
+              <li><b>Sistem</b> seçeneğinin altında yer alan <b>İlk Ayarlara Sıfırla</b> butonuna basın.</li>
+              <li>Güvenlik şifresi sorarsa varsayılan olarak <b>0000</b> veya <b>1234</b> girin ve onaylayın.</li>
+            </ol>
+          </div>
+          <div>
+            <h4 class="text-teal-400 font-bold mb-3 flex items-center gap-2 text-sm sm:text-base">📡 Uydu Kurulumu (TKGS & Manuel)</h4>
+            <ol class="list-decimal list-inside space-y-2 text-slate-300 text-xs sm:text-sm">
+              <li><b>Ayarlar</b> > <b>Tüm Ayarlar</b> > <b>Genel</b> > <b>Kanallar</b> yolunu izleyin.</li>
+              <li><b>Kanal Tarama ve Ayarlar</b> menüsüne girin.</li>
+              <li>Kanal Ayarlama modunu <b>Uydu</b> olarak belirleyin.</li>
+              <li><span class="text-amber-400 font-semibold">Merkezi sistem ayarı için:</span> <b>Uydu Ayarları</b> seçeneğine tıklayın. Listeden Türksat'ı seçip <b>DiSEqC</b> ayarını A veya B (genelde 1 numaralı port) olarak değiştirin.</li>
+              <li>Geri gelip <b>Kanal Tarama</b> seçeneğine basın ve <b>TKGS</b> modunu seçerek aramayı başlatın.</li>
+            </ol>
+          </div>
+        `
+      },
+      {
+        keys: ['tcl', 'onvo', 'dijitsu', 'axen', 'android', 'google tv', 'xiaomi', 'mi tv'],
+        name: 'TCL, ONVO, DIJITSU & AXEN (Android / Google TV)',
+        content: `
+          <div class="mb-5">
+            <h4 class="text-teal-400 font-bold mb-3 flex items-center gap-2 text-sm sm:text-base">🔄 Fabrika Ayarlarına Sıfırlama</h4>
+            <ol class="list-decimal list-inside space-y-2 text-slate-300 text-xs sm:text-sm">
+              <li>Kumandadaki <b>Ayarlar (Dişli Çark)</b> tuşuna basın.</li>
+              <li>Açılan sağ panelden <b>Sistem</b> (Google TV'lerde) veya <b>Cihaz Tercihleri</b> (Android TV'lerde) menüsüne girin.</li>
+              <li><b>Hakkında</b> seçeneğine tıklayın.</li>
+              <li>En altta yer alan <b>Fabrika Ayarlarına Sıfırla</b> seçeneğini seçin ve <b>Her Şeyi Sil</b> diyerek onaylayın.</li>
+            </ol>
+          </div>
+          <div>
+            <h4 class="text-teal-400 font-bold mb-3 flex items-center gap-2 text-sm sm:text-base">📡 Uydu Kurulumu (TKGS & Manuel)</h4>
+            <ol class="list-decimal list-inside space-y-2 text-slate-300 text-xs sm:text-sm">
+              <li>TV açıldığında <b>Ayarlar</b> > <b>Kanallar ve Girişler</b> > <b>Kanallar</b> menüsüne girin.</li>
+              <li>Kanal Kurulum Modu seçeneğini <b>Uydu (Sabit Uydu)</b> olarak değiştirin.</li>
+              <li><b>Otomatik Kanal Tarama</b> veya <b>Kanallar</b> menüsüne girerek <b>Uydu Ayarları</b>'nı açın.</li>
+              <li>Uydu listesinden <b>Türksat 42.0E</b> uydusunu bulun ve aktif edin.</li>
+              <li>Arama seçeneklerinde <b>TKGS</b> seçeneğini görüyorsanız, TKGS çalışma modunu <b>Esnek</b> yapıp çalıştırın.</li>
+              <li><span class="text-amber-400 font-semibold">TKGS yoksa:</span> <b>Manuel Tarama (TP Tarama)</b> menüsüne girip 12380 Frekans, V (Dikey) Polarizasyon, 27500 Sembol Oranı girerek <b>Ağ Arama</b> seçeneğini Açık yapıp taratın.</li>
+            </ol>
+          </div>
+        `
+      },
+      {
+        keys: ['linux', 'eski', 'smart'],
+        name: 'ESKİ SMART TV / LINUX (Eski Axen, Dijitsu vb.)',
+        content: `
+          <div class="mb-5">
+            <h4 class="text-teal-400 font-bold mb-3 flex items-center gap-2 text-sm sm:text-base">🔄 Fabrika Ayarlarına Sıfırlama</h4>
+            <ol class="list-decimal list-inside space-y-2 text-slate-300 text-xs sm:text-sm">
+              <li>Kumandadan <b>Menu</b> veya <b>Home</b> tuşuna basarak TV ayarlarına girin.</li>
+              <li><b>Kurulum</b> veya <b>Gelişmiş Seçenekler</b> sekmesini bulun.</li>
+              <li><b>İlk Kuruluma Dön</b> ya da <b>Fabrika Ayarları</b> seçeneğine tıklayın. Şifre genellikle <b>0000</b>'dır.</li>
+            </ol>
+          </div>
+          <div>
+            <h4 class="text-teal-400 font-bold mb-3 flex items-center gap-2 text-sm sm:text-base">📡 Uydu Kurulumu (Manuel Şebeke Arama)</h4>
+            <ol class="list-decimal list-inside space-y-2 text-slate-300 text-xs sm:text-sm">
+              <li><b>Menü</b> > <b>Kanal Kurulumu / Kaynak Ayarları</b> bölümüne girin. Giriş kaynağının <b>Uydu</b> olduğundan emin olun.</li>
+              <li><b>Anten Ayarları</b> menüsünden <b>Türksat 42E</b> uydusunu seçin.</li>
+              <li><b>Manuel Arama / Transponder Ekleme</b> menüsüne gidin.</li>
+              <li>Kumandanın renkli tuşlarını kullanarak yeni frekans ekleyin: <b>12380 V (Dikey) 27500</b>.</li>
+              <li>Kaydettikten sonra <b>Ağ Arama (Network Search)</b> seçeneğini mutlaka <b>AÇIK</b> yapın ve aramayı başlatın.</li>
+            </ol>
+          </div>
+        `
+      },
+      {
+        keys: ['vestel', 'regal', 'seg', 'hi-level', 'toshiba', 'telefunken'],
+        name: 'Vestel / Toshiba / Regal Grubu',
+        content: `
+          <div class="mb-4">
+            <h4 class="text-teal-400 font-bold mb-2 flex items-center gap-2 text-sm sm:text-base">📡 Uydu Kurulumu</h4>
+            <ol class="list-decimal list-inside space-y-1.5 text-slate-300 text-xs sm:text-sm">
+              <li>Kumandadan <b>Menü</b> tuşuna basın.</li>
+              <li><b>Kurulum</b> veya <b>Kanal Ayarları</b> menüsünü açın.</li>
+              <li><b>Manuel Kanal Arama</b> seçeneğine tıklayın.</li>
+              <li>Arama Tipi'ni <b>Uydu</b> yapıp Şebeke Arama özelliğini açık konuma getirin.</li>
+              <li>Kopyaladığınız Frekans ve Sembol bilgilerini yazıp <b>OK</b> tuşuna basarak aramayı başlatın.</li>
+            </ol>
+          </div>
+        `
+      },
+      {
+        keys: ['beko', 'arçelik', 'arcelik', 'grundig', 'altus'],
+        name: 'Arçelik / Beko / Grundig Grubu',
+        content: `
+          <div class="mb-4">
+            <h4 class="text-teal-400 font-bold mb-2 flex items-center gap-2 text-sm sm:text-base">📡 Uydu Kurulumu</h4>
+            <ol class="list-decimal list-inside space-y-1.5 text-slate-300 text-xs sm:text-sm">
+              <li>Kumandadan <b>Menü</b> tuşuna basın.</li>
+              <li><b>Kaynak Ayarları</b> veya <b>Ayarlar</b> menüsüne girin.</li>
+              <li><b>Manuel Kanal Arama</b> seçeneğini bulun.</li>
+              <li>Türksat seçili iken Frekans değerlerini kumanda ile girin.</li>
+              <li>Şebeke Arama (Ağ Arama) seçeneğini <b>Açık</b> yapıp aramayı başlatın.</li>
+            </ol>
+          </div>
+        `
+      }
+    ];
+
+    function searchDevice() {
+      const input = document.getElementById('deviceInput').value.toLowerCase().trim();
+      const responseContainer = document.getElementById('aiResponseContainer');
+      const contentDiv = document.getElementById('aiResponseContent');
+      
+      if(!input) return;
+
+      responseContainer.classList.remove('hidden');
+      contentDiv.innerHTML = `<div class="flex items-center gap-2 text-teal-400 font-bold"><svg class="animate-spin -ml-1 mr-2 h-5 w-5 text-teal-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Analiz ediliyor...</div>`;
+
+      setTimeout(() => {
+        let matchedGuide = null;
+        for (let guide of deviceDatabase) {
+          if (guide.keys.some(key => input.includes(key))) {
+            matchedGuide = guide;
+            break;
+          }
+        }
+
+        const searchQuery = encodeURIComponent(`${input} TV uydu frekans manuel kanal ekleme ayarları nasıl yapılır videolu anlatım`);
+        const googleSearchURL = `https://www.google.com/search?q=${searchQuery}`;
+
+        let html = '';
+
+        if (matchedGuide) {
+          html += `<h3 class="font-extrabold text-lg sm:text-xl text-teal-300 mb-4 border-b border-slate-700 pb-2">✔ ${matchedGuide.name}</h3>`;
+          html += matchedGuide.content;
+        } else {
+          html += `
+            <div class="mb-4 bg-amber-500/10 border border-amber-500/30 p-3 rounded-xl text-amber-200 text-xs sm:text-sm">
+              <span class="font-bold">"${input}"</span> markası/modeli için özel şablon bulamadım ancak menüler %90 aynıdır. Şu adımları deneyin:
+            </div>
+            <h3 class="font-bold text-base sm:text-lg text-teal-300 mb-3 border-b border-slate-700 pb-2">⚙️ Standart Kurulum:</h3>
+            <ol class="list-decimal list-inside space-y-2 text-slate-300 text-xs sm:text-sm mb-4">
+              <li class="pl-1 marker:text-teal-500">Kumandadan <b>Menü</b> tuşuna basıp <b>Kurulum</b> alanına girin.</li>
+              <li class="pl-1 marker:text-teal-500"><b>Manuel Arama</b> veya <b>Yeni TP Ekle</b> menüsünü bulun.</li>
+              <li class="pl-1 marker:text-teal-500">Frekans değerlerini girip <b>Şebeke Aramayı</b> açık yaparak <b>OK</b> basın.</li>
+            </ol>
+          `;
+        }
+
+        html += `
+          <div class="mt-5 pt-4 border-t border-slate-700">
+            <p class="text-xs sm:text-sm text-slate-400 mb-3">Videolu bir rehbere mi ihtiyacınız var? Sizin için hazırladığım şu akıllı web aramasına göz atın:</p>
+            <a href="#" onclick="window.open('${googleSearchURL}', '_blank', 'noopener,noreferrer'); return false;" class="flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white font-bold py-2.5 sm:py-3 px-4 rounded-xl transition border border-slate-600 shadow-md text-xs sm:text-sm">
+              <svg class="w-4 h-4 sm:w-5 sm:h-5 text-blue-400" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+              </svg>
+              Google'da Videolu ve Detaylı Ara
+            </a>
+          </div>
+        `;
+        
+        contentDiv.innerHTML = html;
+        
+        const chatBox = document.querySelector('#guideModal .overflow-y-auto');
+        chatBox.scrollTo({ top: chatBox.scrollHeight, behavior: 'smooth' });
+        
+      }, 600);
+    }
   </script>
 </body>
 </html>
