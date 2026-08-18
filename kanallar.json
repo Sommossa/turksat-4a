@@ -1,502 +1,4268 @@
 [
   {
-    "kanal": "",
-    "paket": "NR1 TÜRK FM",
+    "kanal": "NR1 TÜRK FM",
     "frekans": "12729",
     "polarizasyon": "V",
-    "sembol": "Batı",
-    "fec": "30000",
-    "kapsama": "2/3",
-    "tur": ""
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "RADYO"
   },
   {
-    "kanal": "",
-    "paket": "NR1 FM.",
+    "kanal": "NR1 FM.",
     "frekans": "12729",
     "polarizasyon": "V",
-    "sembol": "Batı",
-    "fec": "30000",
-    "kapsama": "2/3",
-    "tur": ""
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "RADYO"
   },
   {
-    "kanal": "",
-    "paket": "NR1 FM",
+    "kanal": "NR1 FM",
     "frekans": "12729",
     "polarizasyon": "V",
-    "sembol": "Batı",
-    "fec": "30000",
-    "kapsama": "2/3",
-    "tur": ""
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "RADYO"
   },
   {
-    "kanal": "",
-    "paket": "PAL STATION",
+    "kanal": "PAL STATION",
     "frekans": "11557",
     "polarizasyon": "V",
-    "sembol": "Batı",
-    "fec": "30000",
-    "kapsama": "2/3",
-    "tur": ""
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "TV"
   },
   {
-    "kanal": "",
-    "paket": "ERKAM RADYO",
+    "kanal": "ERKAM RADYO",
     "frekans": "11557",
     "polarizasyon": "V",
-    "sembol": "Batı",
-    "fec": "30000",
-    "kapsama": "2/3",
-    "tur": ""
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "RADYO"
   },
   {
-    "kanal": "",
-    "paket": "PAL NOSTALJİ",
+    "kanal": "PAL NOSTALJİ",
     "frekans": "11557",
     "polarizasyon": "V",
-    "sembol": "Batı",
-    "fec": "30000",
-    "kapsama": "2/3",
-    "tur": ""
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "TV"
   },
   {
-    "kanal": "",
-    "paket": "AKRA FM",
+    "kanal": "AKRA FM",
     "frekans": "11557",
     "polarizasyon": "V",
-    "sembol": "Batı",
-    "fec": "30000",
-    "kapsama": "2/3",
-    "tur": ""
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "RADYO"
   },
   {
-    "kanal": "",
-    "paket": "DOMASHNIY INTERNATIONAL",
+    "kanal": "DOMASHNIY INTERNATIONAL",
     "frekans": "11012",
     "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "30000",
-    "kapsama": "3/4",
-    "tur": "1256"
+    "kapsama": "Doğu",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
   },
   {
-    "kanal": "",
-    "paket": "RUSSIA 24",
+    "kanal": "RUSSIA 24",
     "frekans": "11012",
     "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "30000",
-    "kapsama": "3/4",
-    "tur": "1251"
+    "kapsama": "Doğu",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
   },
   {
-    "kanal": "",
-    "paket": "NTV STYLE",
+    "kanal": "NTV STYLE",
     "frekans": "11012",
     "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "30000",
-    "kapsama": "3/4",
-    "tur": "1252"
+    "kapsama": "Doğu",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
   },
   {
-    "kanal": "",
-    "paket": "NTV PRAVO",
+    "kanal": "NTV PRAVO",
     "frekans": "11012",
     "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "30000",
-    "kapsama": "3/4",
-    "tur": "1253"
+    "kapsama": "Doğu",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
   },
   {
-    "kanal": "",
-    "paket": "PERETS INTERNATIONAL",
+    "kanal": "PERETS INTERNATIONAL",
     "frekans": "11012",
     "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "30000",
-    "kapsama": "3/4",
-    "tur": "1260"
+    "kapsama": "Doğu",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
   },
   {
-    "kanal": "",
-    "paket": "UMKA",
+    "kanal": "UMKA",
     "frekans": "11012",
     "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "30000",
-    "kapsama": "3/4",
-    "tur": "1264"
+    "kapsama": "Doğu",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
   },
   {
-    "kanal": "",
-    "paket": "REN INTERNATIONAL",
+    "kanal": "REN INTERNATIONAL",
     "frekans": "11012",
     "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "30000",
-    "kapsama": "3/4",
-    "tur": "1258"
+    "kapsama": "Doğu",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
   },
   {
-    "kanal": "",
-    "paket": "TNT MUSIC",
+    "kanal": "TNT MUSIC",
     "frekans": "11012",
     "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "30000",
-    "kapsama": "3/4",
-    "tur": "1263"
+    "kapsama": "Doğu",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
   },
   {
-    "kanal": "",
-    "paket": "IZVESTIYA",
+    "kanal": "IZVESTIYA",
     "frekans": "11012",
     "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "30000",
-    "kapsama": "3/4",
-    "tur": "1257"
+    "kapsama": "Doğu",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
   },
   {
-    "kanal": "",
-    "paket": "UNKNOWN RUSSIA",
+    "kanal": "UNKNOWN RUSSIA",
     "frekans": "11012",
     "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "30000",
-    "kapsama": "3/4",
-    "tur": "1268"
+    "kapsama": "Doğu",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
   },
   {
-    "kanal": "",
-    "paket": "START AIR",
+    "kanal": "START AIR",
     "frekans": "11012",
     "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "30000",
-    "kapsama": "3/4",
-    "tur": "1266"
+    "kapsama": "Doğu",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
   },
   {
-    "kanal": "",
-    "paket": "MOSCOW 24",
+    "kanal": "MOSCOW 24",
     "frekans": "11012",
     "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "30000",
-    "kapsama": "3/4",
-    "tur": "1269"
+    "kapsama": "Doğu",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
   },
   {
-    "kanal": "",
-    "paket": "START EPIC",
+    "kanal": "START EPIC",
     "frekans": "11012",
     "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "30000",
-    "kapsama": "3/4",
-    "tur": "1265"
+    "kapsama": "Doğu",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
   },
   {
-    "kanal": "",
-    "paket": "5 INTERNATIONAL",
+    "kanal": "5 INTERNATIONAL",
     "frekans": "11012",
     "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "30000",
-    "kapsama": "3/4",
-    "tur": "1261"
+    "kapsama": "Doğu",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
   },
   {
-    "kanal": "",
-    "paket": "TNT INT",
+    "kanal": "TNT INT",
     "frekans": "11012",
     "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "30000",
-    "kapsama": "3/4",
-    "tur": "1262"
+    "kapsama": "Doğu",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
   },
   {
-    "kanal": "",
-    "paket": "NTV MIR",
+    "kanal": "NTV MIR",
     "frekans": "11012",
     "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "30000",
-    "kapsama": "3/4",
-    "tur": "1255"
+    "kapsama": "Doğu",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
   },
   {
-    "kanal": "",
-    "paket": "RTR PLANETA",
+    "kanal": "RTR PLANETA",
     "frekans": "11012",
     "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "30000",
-    "kapsama": "3/4",
-    "tur": "1250"
+    "kapsama": "Doğu",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
   },
   {
-    "kanal": "",
-    "paket": "STS INTERNATIONAL",
+    "kanal": "STS INTERNATIONAL",
     "frekans": "11012",
     "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "30000",
-    "kapsama": "3/4",
-    "tur": "1259"
+    "kapsama": "Doğu",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
   },
   {
-    "kanal": "",
-    "paket": "NTV SERIAL",
+    "kanal": "NTV SERIAL",
     "frekans": "11012",
     "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "30000",
-    "kapsama": "3/4",
-    "tur": "1254"
+    "kapsama": "Doğu",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
   },
   {
-    "kanal": "",
-    "paket": "START WORLD",
+    "kanal": "START WORLD",
     "frekans": "11012",
     "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "30000",
-    "kapsama": "3/4",
-    "tur": "1267"
+    "kapsama": "Doğu",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
   },
   {
-    "kanal": "",
-    "paket": "TRT DİYANET ÇOCUK",
+    "kanal": "TRT DİYANET ÇOCUK",
     "frekans": "11794",
     "polarizasyon": "V",
-    "sembol": "TR",
-    "fec": "30000",
-    "kapsama": "3/4",
-    "tur": "1630"
+    "kapsama": "TR",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
   },
   {
-    "kanal": "",
-    "paket": "TRT ULTRA HD TV",
+    "kanal": "TRT ULTRA HD TV",
     "frekans": "11767",
     "polarizasyon": "V",
-    "sembol": "TR",
-    "fec": "15000",
-    "kapsama": "3/4",
-    "tur": "4855"
+    "kapsama": "TR",
+    "sembol": "15000",
+    "fec": "3/4",
+    "tur": "TV"
   },
   {
-    "kanal": "",
-    "paket": "TRT BELGESEL HD",
+    "kanal": "TRT BELGESEL HD",
     "frekans": "11794",
     "polarizasyon": "V",
-    "sembol": "TR",
-    "fec": "30000",
-    "kapsama": "3/4",
-    "tur": "1604"
+    "kapsama": "TR",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
   },
   {
-    "kanal": "",
-    "paket": "TRT GENÇ",
+    "kanal": "TRT GENÇ",
     "frekans": "11794",
     "polarizasyon": "V",
-    "sembol": "TR",
-    "fec": "30000",
-    "kapsama": "3/4",
-    "tur": "1629"
+    "kapsama": "TR",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
   },
   {
-    "kanal": "",
-    "paket": "TRT ÇOCUK HD",
+    "kanal": "TRT ÇOCUK HD",
     "frekans": "11794",
     "polarizasyon": "V",
-    "sembol": "TR",
-    "fec": "30000",
-    "kapsama": "3/4",
-    "tur": "1600"
+    "kapsama": "TR",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
   },
   {
-    "kanal": "",
-    "paket": "TRT 1 HD",
+    "kanal": "TRT 1 HD",
     "frekans": "11794",
     "polarizasyon": "V",
-    "sembol": "TR",
-    "fec": "30000",
-    "kapsama": "3/4",
-    "tur": "1601"
+    "kapsama": "TR",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
   },
   {
-    "kanal": "",
-    "paket": "TRT SPOR HD",
+    "kanal": "TRT SPOR HD",
     "frekans": "11794",
     "polarizasyon": "V",
-    "sembol": "TR",
-    "fec": "30000",
-    "kapsama": "3/4",
-    "tur": "1603"
+    "kapsama": "TR",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
   },
   {
-    "kanal": "",
-    "paket": "SİNEMA 1001 HD",
-    "frekans": "11789",
-    "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "20000",
-    "kapsama": "3/4",
-    "tur": "4663"
-  },
-  {
-    "kanal": "",
-    "paket": "FX HD",
-    "frekans": "11807",
-    "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "10000",
-    "kapsama": "3/4",
-    "tur": "2957"
-  },
-  {
-    "kanal": "",
-    "paket": "SİNEMA YERLİ HD",
-    "frekans": "11789",
-    "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "20000",
-    "kapsama": "3/4",
-    "tur": "4665"
-  },
-  {
-    "kanal": "",
-    "paket": "SİNEMA KOMEDİ 2 HD",
-    "frekans": "11789",
-    "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "20000",
-    "kapsama": "3/4",
-    "tur": "4662"
-  },
-  {
-    "kanal": "",
-    "paket": "SİNEMA KOMEDİ HD",
-    "frekans": "11789",
-    "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "20000",
-    "kapsama": "3/4",
-    "tur": "4661"
-  },
-  {
-    "kanal": "",
-    "paket": "SİNEMA AİLE 2 HD",
-    "frekans": "11789",
-    "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "20000",
-    "kapsama": "3/4",
-    "tur": "4658"
-  },
-  {
-    "kanal": "",
-    "paket": "SİNEMA AİLE HD",
-    "frekans": "11789",
-    "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "20000",
-    "kapsama": "3/4",
-    "tur": "4657"
-  },
-  {
-    "kanal": "",
-    "paket": "SİNEMA AKSİYON 2 HD",
-    "frekans": "11789",
-    "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "20000",
-    "kapsama": "3/4",
-    "tur": "4655"
-  },
-  {
-    "kanal": "",
-    "paket": "NAT GEO HD",
-    "frekans": "11807",
-    "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "10000",
-    "kapsama": "3/4",
-    "tur": "2956"
-  },
-  {
-    "kanal": "",
-    "paket": "BBC FIRST HD",
-    "frekans": "11789",
-    "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "20000",
-    "kapsama": "3/4",
-    "tur": "4654"
-  },
-  {
-    "kanal": "",
-    "paket": "SİNEMA 1002 HD",
-    "frekans": "11789",
-    "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "20000",
-    "kapsama": "3/4",
-    "tur": "4664"
-  },
-  {
-    "kanal": "",
-    "paket": "DISNEY JUNIOR",
-    "frekans": "11807",
-    "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "10000",
-    "kapsama": "3/4",
-    "tur": "2958"
-  },
-  {
-    "kanal": "",
-    "paket": "DISNEY JUNIOR",
-    "frekans": "11789",
-    "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "20000",
-    "kapsama": "3/4",
-    "tur": "4666"
-  },
-  {
-    "kanal": "",
-    "paket": "TARİH TV",
-    "frekans": "11789",
-    "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "20000",
-    "kapsama": "3/4",
-    "tur": "4667"
-  },
-  {
-    "kanal": "",
-    "paket": "WILD HD",
-    "frekans": "11807",
-    "polarizasyon": "H",
-    "sembol": "Doğu",
-    "fec": "10000",
-    "kapsama": "3/4",
-    "tur": "2955"
-  },
-  {
-    "kanal": "",
-    "paket": "24 HD",
+    "kanal": "24 HD",
     "frekans": "11861",
     "polarizasyon": "V",
-    "sembol": "Batı",
-    "fec": "16666",
-    "kapsama": "2/3",
-    "tur": "5055"
+    "kapsama": "Batı",
+    "sembol": "16666",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "ALEM FM",
+    "frekans": "11861",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "16666",
+    "fec": "2/3",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "SHOW TURK HD",
+    "frekans": "11844",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "10833",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TÜRKMENELİ TV HD",
+    "frekans": "11825",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "4444",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KANAL 1",
+    "frekans": "11844",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "10833",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TV4 HD",
+    "frekans": "11861",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "16666",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "ATV AVRUPA",
+    "frekans": "11833",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "7500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "24 RADYO",
+    "frekans": "11861",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "16666",
+    "fec": "2/3",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "360 HD",
+    "frekans": "11861",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "16666",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "HT SPOR",
+    "frekans": "11844",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "10833",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "LİG RADYO",
+    "frekans": "11861",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "16666",
+    "fec": "2/3",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "BLOOMBERG HT HD",
+    "frekans": "11844",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "10833",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "A NEWS HD",
+    "frekans": "11833",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "7500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "A HABER.",
+    "frekans": "11833",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "7500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "HABERTÜRK HD",
+    "frekans": "11844",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "10833",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "SHOW MAX HD",
+    "frekans": "11844",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "10833",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TİVİBU SPOR HD",
+    "frekans": "11853",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "25000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TİVİBU TANITIM HD",
+    "frekans": "11853",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "25000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TV8.5 HD",
+    "frekans": "11901",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "12500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "NOW HD",
+    "frekans": "11886",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "10833",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TV8 HD",
+    "frekans": "11901",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "12500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT 1",
+    "frekans": "11957",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT HABER",
+    "frekans": "11957",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT 2 HD",
+    "frekans": "11957",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT MÜZİK",
+    "frekans": "11957",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT RADYO KURDİ",
+    "frekans": "11957",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "TRT MEMLEKETİM",
+    "frekans": "11957",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRABZON RADYO",
+    "frekans": "11957",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "TSR TURKÇE",
+    "frekans": "11957",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "METEOROLOJININ SESI",
+    "frekans": "11957",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "RADYO 1",
+    "frekans": "11957",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "TRT SPOR YILDIZ",
+    "frekans": "11957",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT NAGME",
+    "frekans": "11957",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "RADYO GAP",
+    "frekans": "11957",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "TRT TURKU",
+    "frekans": "11957",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "RADYO 3",
+    "frekans": "11957",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "TRT HABER RADYO",
+    "frekans": "11957",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "TRT 3 SPOR",
+    "frekans": "11957",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "ANTALYA RADYO",
+    "frekans": "11957",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "VOT EAST",
+    "frekans": "11957",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "ERZURUM RADYO",
+    "frekans": "11957",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "ÇUKUROVA RADYO",
+    "frekans": "11957",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "TRT FM",
+    "frekans": "11957",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "VOT WORLD",
+    "frekans": "11957",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "VOT WEST",
+    "frekans": "11957",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "JOY FM TÜRKİYE",
+    "frekans": "11976",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "VIRGIN RADIO",
+    "frekans": "11976",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "JOYTÜRK",
+    "frekans": "11976",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "METRO FM",
+    "frekans": "11976",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "VIVA RADYO",
+    "frekans": "11976",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "SÜPER FM",
+    "frekans": "11976",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "SHOW RADYO",
+    "frekans": "11976",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "RİBAT FM",
+    "frekans": "11996",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "KÖY TV",
+    "frekans": "11996",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "ORDU ALTAŞ TV",
+    "frekans": "11996",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "TV 52",
+    "frekans": "11996",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TMB TV",
+    "frekans": "11996",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TV 1",
+    "frekans": "11996",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "EGEMAX TV",
+    "frekans": "11996",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "AKİT TV HD",
+    "frekans": "11996",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KON TV HD",
+    "frekans": "11996",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "BEYAZ TV HD",
+    "frekans": "11996",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KRT TV HD",
+    "frekans": "11996",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "BİR TV",
+    "frekans": "11996",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KANAL 32",
+    "frekans": "11996",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "tv42",
+    "frekans": "11996",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "DOST TV",
+    "frekans": "11996",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "FREEDOM.",
+    "frekans": "11996",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TV 264",
+    "frekans": "11996",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TV KAYSERİ",
+    "frekans": "11996",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "EKİN TÜRK TV",
+    "frekans": "11996",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KANAL 3 HD",
+    "frekans": "11996",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "BENGÜ TÜRK HD",
+    "frekans": "11996",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TV DEN",
+    "frekans": "11996",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "DMAX",
+    "frekans": "12015",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "NTV RADYO",
+    "frekans": "12015",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "TLC HD",
+    "frekans": "12015",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "DMAX HD",
+    "frekans": "12015",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "NTV HD",
+    "frekans": "12015",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KRAL POP",
+    "frekans": "12015",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "STAR TV HD",
+    "frekans": "12015",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TLC",
+    "frekans": "12015",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KRAL FM",
+    "frekans": "12015",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "Kalp FM",
+    "frekans": "12034",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "RADYO MARS",
+    "frekans": "12034",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "SLOWTÜRK",
+    "frekans": "12034",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "HABER GLOBAL HD",
+    "frekans": "12034",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "EURO D HD",
+    "frekans": "12034",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "RD SEYMEN",
+    "frekans": "12034",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "ASFTV",
+    "frekans": "12034",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "CNNTURK RADYO",
+    "frekans": "12034",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "CNN TURK HD",
+    "frekans": "12034",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "RADYO D",
+    "frekans": "12034",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "D ANADOLU",
+    "frekans": "12034",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TV8 INT HD",
+    "frekans": "12034",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TELE 1 HD",
+    "frekans": "12034",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "45'LİK",
+    "frekans": "12034",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "RUMELİ TV",
+    "frekans": "12034",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT KURD",
+    "frekans": "12091",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "VOT WORLD",
+    "frekans": "12091",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT AVAZ HD",
+    "frekans": "12091",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "VOT EAST",
+    "frekans": "12091",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT ÇOCUK",
+    "frekans": "12091",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT VOT 1",
+    "frekans": "12091",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT DİYANET ÇOCUK",
+    "frekans": "12091",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT ARAPÇA HD",
+    "frekans": "12091",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT BELGESEL",
+    "frekans": "12091",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TSR TURKÇE",
+    "frekans": "12091",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT RADYO KURDİ",
+    "frekans": "12091",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "VOT WEST",
+    "frekans": "12091",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT HABER",
+    "frekans": "12091",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT GENÇ",
+    "frekans": "12091",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT TÜRK",
+    "frekans": "12091",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT SPOR",
+    "frekans": "12091",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "DIS YAY ORTA DALGA ARAPÇA",
+    "frekans": "12091",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT MÜZİK",
+    "frekans": "12091",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT 1",
+    "frekans": "12091",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT ARAPÇA",
+    "frekans": "12091",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT TÜRK HD",
+    "frekans": "12226",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT 1 HD",
+    "frekans": "12226",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT SPOR HD",
+    "frekans": "12226",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT HABER HD",
+    "frekans": "12226",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT KURDİ",
+    "frekans": "12226",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "TRT WORLD RD",
+    "frekans": "12226",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "TRT BELGESEL HD",
+    "frekans": "12226",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT MÜZİK HD",
+    "frekans": "12226",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT ÇOCUK HD",
+    "frekans": "12226",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT WORLD HD",
+    "frekans": "12226",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "A PARA HD",
+    "frekans": "12206",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "MİNİKA GO",
+    "frekans": "12206",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "VAV RADYO",
+    "frekans": "12206",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "VAV TV",
+    "frekans": "12206",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "A HABER RADYO",
+    "frekans": "12206",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "ATV HD",
+    "frekans": "12206",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "A HABER HD",
+    "frekans": "12206",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "RADYO TURKUVAZ",
+    "frekans": "12206",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "A SPOR HD",
+    "frekans": "12206",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "A SPOR RADYO",
+    "frekans": "12206",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "A2 HD",
+    "frekans": "12206",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "MİNİKA ÇOCUK",
+    "frekans": "12206",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "PRD 7",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "BRTV",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "ÇİFTÇİ TV",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "VAN65",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "PRD 3",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "KAFA RADYO",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "POWER FM",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "TİVİ 6",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "İKRA TV",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KANAL FIRAT",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "POWERTURK HD",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "POWERTURK FM",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "AKSU TV",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "MERCAN TV",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "SAT 7 TÜRK",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "MK TV",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "ER TV",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "FENOMENTÜRK",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "ON4 TV",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TV 41",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KANAL 15",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KANAL 12",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "CAN TEMPO TV",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "PRD 1",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "SUN RTV",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TV3",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KANAL 58",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "ES TV",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "SEYR FM",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "KANAL V",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KANAL 26",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "PRD 6",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "MALATYA VUSLAT TV",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KANAL 23",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "RADYO FENOMEN",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "GRT.",
+    "frekans": "12264",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "LİDER HABER HD",
+    "frekans": "12245",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TV 2 HD",
+    "frekans": "12245",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "DREAM TÜRK HD",
+    "frekans": "12245",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "CNBC-e",
+    "frekans": "12245",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KANAL D HD",
+    "frekans": "12245",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KOCAELİ TV",
+    "frekans": "12245",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "CARTON NETWORK",
+    "frekans": "12245",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "NHK WORLD-JAPAN",
+    "frekans": "12245",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "T.A.Y. TV",
+    "frekans": "12245",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "SHOW MAX HD",
+    "frekans": "12302",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "HABERTÜRK HD",
+    "frekans": "12302",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "HT SPOR",
+    "frekans": "12302",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "HABERTÜRK RADYO",
+    "frekans": "12302",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "KANAL 1",
+    "frekans": "12302",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "SHOW HD",
+    "frekans": "12302",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "HT SPOR RADYO",
+    "frekans": "12302",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "BLOOMBERG HT HD",
+    "frekans": "12302",
+    "polarizasyon": "V",
+    "kapsama": "TR",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "STOON TV",
+    "frekans": "12379",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "EKOTÜRK HD",
+    "frekans": "12344",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "SAHİL GÜVENLİK RADYOSU",
+    "frekans": "12379",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "HALK TV",
+    "frekans": "12379",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KÜPE FM",
+    "frekans": "12379",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "BEST FM",
+    "frekans": "12379",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "RD 2000 FM",
+    "frekans": "12379",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "VAN TV",
+    "frekans": "12344",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "AGRO TV",
+    "frekans": "12344",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TGRT BELGESEL HD",
+    "frekans": "12379",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KARADENIZ FM",
+    "frekans": "12379",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "EKOL TV HD",
+    "frekans": "12344",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TGRT FM",
+    "frekans": "12379",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "BAYRAM FM",
+    "frekans": "12379",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "TGRT HABER HD",
+    "frekans": "12379",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TEK RUMELİ TV.",
+    "frekans": "12344",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "DiYANET RADYO",
+    "frekans": "12379",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "KURAN RADYO",
+    "frekans": "12379",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "HT SPOR",
+    "frekans": "12344",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "DİYANET TV HD",
+    "frekans": "12379",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "POLİS RADYOSU",
+    "frekans": "12379",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "DİYANET RİSALET RADYO",
+    "frekans": "12379",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "0 SIFIR TV",
+    "frekans": "12378",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "beIN SPORTS HABER.",
+    "frekans": "12378",
+    "polarizasyon": "H",
+    "kapsama": "TR",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "RADYO SPOR",
+    "frekans": "12422",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "2/3",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "GRT",
+    "frekans": "12422",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "RADIOSPUTNIK",
+    "frekans": "12422",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "BRT 1 HD",
+    "frekans": "12457",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "FM TV",
+    "frekans": "12422",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "2/3",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "KANAL T",
+    "frekans": "12457",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KIBRIS TV HD",
+    "frekans": "12457",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "NR1 TÜRK TV HD",
+    "frekans": "12457",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "ULUSAL 1 TV",
+    "frekans": "12422",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KANAL 33",
+    "frekans": "12457",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "İLKE TV",
+    "frekans": "12457",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TV2020",
+    "frekans": "12457",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "ON4 TV",
+    "frekans": "12457",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "BRT 2 HD",
+    "frekans": "12457",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KUDÜS TV",
+    "frekans": "12457",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "MELTEM TV",
+    "frekans": "12422",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "LUYS TV",
+    "frekans": "12457",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "NR1 FM.",
+    "frekans": "12457",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "KIBRIS FM",
+    "frekans": "12457",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "LALEGÜL FM",
+    "frekans": "12422",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "2/3",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "GENÇ TV",
+    "frekans": "12457",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "NR1 FM",
+    "frekans": "12457",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "NR1 TÜRK FM",
+    "frekans": "12457",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "TÜRKSAT TANITIM HD",
+    "frekans": "12457",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "ADA TV",
+    "frekans": "12457",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TH TÜRKHABER",
+    "frekans": "12422",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KANAL AVRUPA",
+    "frekans": "12457",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "HDKARADENİZ.",
+    "frekans": "12457",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "GÜNEYDOĞU TV",
+    "frekans": "12422",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KADIRGA TV",
+    "frekans": "12422",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "LALEGÜL",
+    "frekans": "12422",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "PATI TV",
+    "frekans": "12457",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KANAL URFA",
+    "frekans": "12422",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "LİNE TV",
+    "frekans": "12422",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "HRT TV",
+    "frekans": "12422",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "K KARDELEN TV",
+    "frekans": "12422",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "2/3",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "TÜRKSAT TANITIM",
+    "frekans": "12422",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KABLO INFO HD",
+    "frekans": "12422",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "POLİS RADYOSU",
+    "frekans": "12422",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "AYAZ TV",
+    "frekans": "12422",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "WITNESS EYE",
+    "frekans": "12457",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KANAL 7 HD",
+    "frekans": "12457",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "RADYO 7 HD",
+    "frekans": "12457",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "2/3",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "TRT EBA HD",
+    "frekans": "12457",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TÜRKSAT TANITIM",
+    "frekans": "12457",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "ULKE TV HD",
+    "frekans": "12457",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "PERSIANA TÜRKİYE",
+    "frekans": "12457",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TÜRKSAT SAAT",
+    "frekans": "12457",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "DİYANET TV",
+    "frekans": "12422",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "ABY TV",
+    "frekans": "12553",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "CRYSTAL TV PLUS",
+    "frekans": "12553",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "DW TV",
+    "frekans": "12553",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "MAX TV",
+    "frekans": "12553",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT WORLD",
+    "frekans": "12553",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "LUMEN CHRİSTİ TV",
+    "frekans": "12553",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "AIT TV",
+    "frekans": "12553",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "MX24 TV",
+    "frekans": "12553",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TODAYS TV",
+    "frekans": "12553",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "SIRIUS TV",
+    "frekans": "12553",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "GHC",
+    "frekans": "12553",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KIDS ARENA",
+    "frekans": "12553",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "AL JAZEERA",
+    "frekans": "12553",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "JUNIOR WORLD",
+    "frekans": "12553",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "CRYSTAL TV PRIME",
+    "frekans": "12553",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "CRYSTAL MEGA WORLD",
+    "frekans": "12553",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "MBC MAX",
+    "frekans": "12553",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "CRYSTAL TV XTRA",
+    "frekans": "12553",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "RHEMA TV",
+    "frekans": "12553",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "MBC 2",
+    "frekans": "12553",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "PROPERTY TV",
+    "frekans": "12553",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "FOOTPRINT TV",
+    "frekans": "12553",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "CHARISMA TV",
+    "frekans": "12553",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KPEGAH TV",
+    "frekans": "12553",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "ABS",
+    "frekans": "12578",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "4800",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "ITAGE TELIFISAN",
+    "frekans": "12578",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "4800",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "SEBIOBA",
+    "frekans": "12578",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "4800",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "Al-Umma",
+    "frekans": "12578",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "4800",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "EZIOKWU TV",
+    "frekans": "12578",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "4800",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "BRTV",
+    "frekans": "12578",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "4800",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "AOM TV",
+    "frekans": "12578",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "4800",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "DIVINE HAND",
+    "frekans": "12578",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "4800",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "UTV",
+    "frekans": "12578",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "4800",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "PRAISE TV",
+    "frekans": "12578",
+    "polarizasyon": "V",
+    "kapsama": "Afrika",
+    "sembol": "4800",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "ABY TV",
+    "frekans": "18633",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "DW TV",
+    "frekans": "18633",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "PROPERTY TV",
+    "frekans": "18633",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "RHEMA TV",
+    "frekans": "18633",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "CRYSTAL TV PRIME",
+    "frekans": "18633",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "MBC 2",
+    "frekans": "18633",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "CHARISMA TV",
+    "frekans": "18633",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "SIRIUS TV",
+    "frekans": "18633",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "CASH TV",
+    "frekans": "18633",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "MBC MAX",
+    "frekans": "18633",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "LUMEN CHRİSTİ TV",
+    "frekans": "18633",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "MAX TV",
+    "frekans": "18633",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "AIT TV",
+    "frekans": "18633",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "FOOTPRINT TV",
+    "frekans": "18633",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "MX24 TV",
+    "frekans": "18633",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "AL JAZEERA",
+    "frekans": "18633",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KIDS ARENA",
+    "frekans": "18633",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KPEGAH TV",
+    "frekans": "18633",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "CRYSTAL TV PLUS",
+    "frekans": "18633",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "JUNIOR WORLD",
+    "frekans": "18633",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "CRYSTAL TV XTRA",
+    "frekans": "18633",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT WORLD",
+    "frekans": "18633",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "CRYSTAL MEGA WORLD",
+    "frekans": "18633",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "GHC",
+    "frekans": "18633",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TODAYS TV",
+    "frekans": "18633",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "22500",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "SEBIOBA",
+    "frekans": "18658",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "4800",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "AOM TV",
+    "frekans": "18658",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "4800",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "PRAISE TV",
+    "frekans": "18658",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "4800",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "EZIOKWU TV",
+    "frekans": "18658",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "4800",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "BRTV",
+    "frekans": "18658",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "4800",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "ABS",
+    "frekans": "18658",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "4800",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "ITAGE TELIFISAN",
+    "frekans": "18658",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "4800",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "UTV",
+    "frekans": "18658",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "4800",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "DIVINE HAND",
+    "frekans": "18658",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "4800",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "Al-Umma",
+    "frekans": "18658",
+    "polarizasyon": "H",
+    "kapsama": "Ka-West",
+    "sembol": "4800",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TV 5",
+    "frekans": "11225",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TV NET RADYO",
+    "frekans": "11225",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "TV 100 HD",
+    "frekans": "11225",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TVNET HD",
+    "frekans": "11225",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "GZT",
+    "frekans": "11225",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "YILDIZ EN",
+    "frekans": "11225",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "HALK TV HD",
+    "frekans": "11225",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "CGTN HD",
+    "frekans": "11265",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "CGTN DOCUMENTARY HD",
+    "frekans": "11305",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "ŞÖMİNE KEYFİ",
+    "frekans": "11305",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TJK tv HD",
+    "frekans": "11345",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "29750",
+    "fec": "5/6",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT SPOR HD",
+    "frekans": "11385",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "AL QURAN AL KAREEM TV.",
+    "frekans": "11425",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KABLO INFO HD",
+    "frekans": "11425",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "REHBER TV",
+    "frekans": "11425",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "SEMERKAND HD TV",
+    "frekans": "11425",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TYT TÜRK",
+    "frekans": "11425",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "FB TV",
+    "frekans": "11425",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "Bİ KANAL",
+    "frekans": "11425",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TARIM ORMAN EKRANI HD",
+    "frekans": "11425",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "ÇAY TV",
+    "frekans": "11425",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "AS",
+    "frekans": "11425",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "AL SUNNAH AL NABAWIYAH TV.",
+    "frekans": "11425",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "ÇAĞRI FM",
+    "frekans": "11425",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "TELENEWS",
+    "frekans": "11425",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "CEM TV.",
+    "frekans": "11425",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "SEMERKAND WAY",
+    "frekans": "11425",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "SEMERKAND RADYO",
+    "frekans": "11425",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "WITNESS EYE",
+    "frekans": "11425",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "24KZ TV",
+    "frekans": "11425",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "30000",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "NTV SERIAL",
+    "frekans": "11727",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "UMKA",
+    "frekans": "11727",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "DOMASHNIY INTERNATIONAL",
+    "frekans": "11727",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TNT INT",
+    "frekans": "11727",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "REN INTERNATIONAL",
+    "frekans": "11727",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "START WORLD",
+    "frekans": "11727",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "START AIR",
+    "frekans": "11727",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "START EPIC",
+    "frekans": "11727",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "NTV STYLE",
+    "frekans": "11727",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "5 INTERNATIONAL",
+    "frekans": "11727",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "RTR PLANETA",
+    "frekans": "11727",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "UNKNOWN RUSSIA",
+    "frekans": "11727",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TNT MUSIC",
+    "frekans": "11727",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "NTV PRAVO",
+    "frekans": "11727",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "IZVESTIYA",
+    "frekans": "11727",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "STS INTERNATIONAL",
+    "frekans": "11727",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "RUSSIA 24",
+    "frekans": "11727",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "PERETS INTERNATIONAL",
+    "frekans": "11727",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "MOSCOW 24",
+    "frekans": "11727",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "NTV MIR",
+    "frekans": "11727",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "RADYO 7",
+    "frekans": "12111",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "SERCEM TV",
+    "frekans": "12111",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "FLASH HABER HD",
+    "frekans": "12111",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "EDESSA TV",
+    "frekans": "12111",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "EUROSTAR",
+    "frekans": "12111",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "ZAROK TV",
+    "frekans": "12111",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "ULKE TV HD",
+    "frekans": "12111",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "SZC",
+    "frekans": "12111",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KANAL 7 AVRUPA HD",
+    "frekans": "12111",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "ALİKHBARİA TV",
+    "frekans": "12111",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "NEO",
+    "frekans": "12111",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KOZA TV HD",
+    "frekans": "12111",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "BRT RADYO",
+    "frekans": "12149",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "AKRA FM",
+    "frekans": "12149",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "BAYRAK FM",
+    "frekans": "12149",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "ERKAM RADYO",
+    "frekans": "12149",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "RADYO"
+  },
+  {
+    "kanal": "AL SUNNAH AL NABAWIYAH TV",
+    "frekans": "12149",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "AL QURAN AL KAREEM TV",
+    "frekans": "12149",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TGRT",
+    "frekans": "12149",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "Al Zahra TV",
+    "frekans": "12149",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TINT",
+    "frekans": "12149",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "PAL STATION",
+    "frekans": "12149",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TRT EBA",
+    "frekans": "12149",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "PAL NOSTALJİ",
+    "frekans": "12149",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "AL HADATH NEWS CHANNEL",
+    "frekans": "12149",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "GONCA TV",
+    "frekans": "12149",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "KANAL B",
+    "frekans": "12149",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TGRT HABER",
+    "frekans": "12149",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "BRT 3",
+    "frekans": "12149",
+    "polarizasyon": "V",
+    "kapsama": "Batı",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "REN INTERNATIONAL",
+    "frekans": "11746",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TNT INT",
+    "frekans": "11746",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "IZVESTIYA",
+    "frekans": "11746",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "PERETS INTERNATIONAL",
+    "frekans": "11746",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "STS INTERNATIONAL",
+    "frekans": "11746",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "5 INTERNATIONAL",
+    "frekans": "11746",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "START EPIC",
+    "frekans": "11746",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "START AIR",
+    "frekans": "11746",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "START WORLD",
+    "frekans": "11746",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "MOSCOW 24",
+    "frekans": "11746",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "DOMASHNIY INTERNATIONAL",
+    "frekans": "11746",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "NTV STYLE",
+    "frekans": "11746",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "RUSSIA 24",
+    "frekans": "11746",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TNT MUSIC",
+    "frekans": "11746",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "UNKNOWN RUSSIA",
+    "frekans": "11746",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "NTV PRAVO",
+    "frekans": "11746",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "RTR PLANETA",
+    "frekans": "11746",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "UMKA",
+    "frekans": "11746",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "NTV SERIAL",
+    "frekans": "11746",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "NTV MIR",
+    "frekans": "11746",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "3/4",
+    "tur": "TV"
+  },
+  {
+    "kanal": "ATHAVAN",
+    "frekans": "12521",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "FREESAT 24",
+    "frekans": "12521",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "TNL",
+    "frekans": "12521",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "FREESAT 49",
+    "frekans": "12521",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "SRI DALDA MALIGAWA",
+    "frekans": "12521",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "30000",
+    "fec": "2/3",
+    "tur": "TV"
+  },
+  {
+    "kanal": "BRT 1 HD",
+    "frekans": "12599",
+    "polarizasyon": "H",
+    "kapsama": "Doğu",
+    "sembol": "27500",
+    "fec": "2/3",
+    "tur": "TV"
   }
 ]
